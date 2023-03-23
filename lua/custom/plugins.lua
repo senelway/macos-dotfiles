@@ -5,6 +5,14 @@ local plugins = {
   -- Override plugin definition options
 
   {
+    "folke/trouble.nvim",
+    requires = "nvim-tree/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {}
+    end
+  },
+
+  {
     "nvim-telescope/telescope.nvim",
     opts = overrides.telescope,
   },

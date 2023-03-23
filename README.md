@@ -18,6 +18,7 @@ rm -rf ~/.cache/nvim
 <leader> ch # open cheetshet
 <leader> / # comment line
 <leader> v # open terminal
+ge # show errors
 
 >> # or 3>> move line to right
 << # or 3<< move line to left
