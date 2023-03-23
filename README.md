@@ -1,5 +1,6 @@
 ## Install
 ```sh
+brew install neovim
 git clone https://github.com/recats/neovim-nvchad ~/.config/nvim --depth 1 && nvim
 
 ```
