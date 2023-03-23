@@ -1,8 +1,8 @@
 ## Install
 ```sh
 brew install neovim
+brew install ripgrep # is required for grep searching with Telescope (OPTIONAL).
 git clone https://github.com/recats/neovim-nvchad ~/.config/nvim --depth 1 && nvim
-
 ```
 
 ## Uninstall
@@ -15,7 +15,12 @@ rm -rf ~/.cache/nvim
 ## Basic Hotkeys
 ```sh
 <leader> is SPACE
-<leader> + ch # open cheetshet
+<leader> ch # open cheetshet
+<leader> / # comment line
+<leader> v # open terminal
+
+>> # or 3>> move line to right
+<< # or 3<< move line to left
 ```
 
 ## Config
@@ -35,4 +40,13 @@ cd ~/.config/nvim/lua/custom/
 ## <C+p>
 
 ## config in ~/.config/nvim/lua/custom/plugins.lua
+```
+
+## ITerm2 Config
+<img width="946" alt="image" src="https://user-images.githubusercontent.com/9702154/227250844-fc5568bd-26b8-45ca-9999-e0dc84ee0dca.png">
+
+## Plugins update
+```sh
+:Lazy update
+:Lazy sync
 ```
