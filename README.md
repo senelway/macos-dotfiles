@@ -60,4 +60,7 @@ export OPENAI_API_KEY=""
 
 # ~/.zshrc
 # export OPENAI_API_KEY=""
+
+# hotkey is `gpt`
+# ./lua/custom/mappings.lua
 ```
