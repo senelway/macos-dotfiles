@@ -48,6 +48,7 @@ M.mason = {
     "eslint-lsp",
     "eslint_d",
     "prettier",
+    "prettierd",
     "tailwindcss-language-server",
 
     -- go lang
