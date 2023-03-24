@@ -31,6 +31,35 @@ cd ~/.config/nvim/lua/custom/
 # mappings.lua there is a custom hotkeys
 ```
 
+## Plugins | Mason update
+```sh
+sudo nvim
+
+:Lazy update
+:Lazy sync
+
+:MasonInstallAll
+```
+## ChatGPT settings
+```sh
+# generate a token https://platform.openai.com/account/api-keys
+
+export OPENAI_API_KEY=""
+
+# ~/.zshrc
+# export OPENAI_API_KEY=""
+
+# hotkey is `gpt`
+# ./lua/custom/mappings.lua
+```
+
+## Spellcheck
+```sh
+:set spelllang=en_us,cjk
+[s go to prev spell error
+s] go to next spell error
+```
+
 ## Copilot
 ```sh
 # use this command for auth
@@ -46,25 +75,3 @@ cd ~/.config/nvim/lua/custom/
 ## ITerm2 Config
 <img width="946" alt="image" src="https://user-images.githubusercontent.com/9702154/227250844-fc5568bd-26b8-45ca-9999-e0dc84ee0dca.png">
 
-## Plugins | Mason update
-```sh
-sudo nvim
-
-:Lazy update
-:Lazy sync
-
-:MasonInstallAll
-```
-
-## ChatGPT settings
-```sh
-# generate a token https://platform.openai.com/account/api-keys
-
-export OPENAI_API_KEY=""
-
-# ~/.zshrc
-# export OPENAI_API_KEY=""
-
-# hotkey is `gpt`
-# ./lua/custom/mappings.lua
-```
