@@ -65,7 +65,7 @@ local M = {
     scroll_up = "<C-u>",
     scroll_down = "<C-d>",
     toggle_settings = "<C-o>",
-    new_session = "<C-p",
+    new_session = "<C-.",
     cycle_windows = "<Tab>",
     -- in the Sessions pane
     select_session = "<Space>",
