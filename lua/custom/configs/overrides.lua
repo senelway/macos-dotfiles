@@ -51,7 +51,8 @@ M.mason = {
     "tailwindcss-language-server",
 
     -- go lang
-    "gopls"
+    "gopls",
+
   },
 }
 
