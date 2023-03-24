@@ -46,10 +46,14 @@ cd ~/.config/nvim/lua/custom/
 ## ITerm2 Config
 <img width="946" alt="image" src="https://user-images.githubusercontent.com/9702154/227250844-fc5568bd-26b8-45ca-9999-e0dc84ee0dca.png">
 
-## Plugins update
+## Plugins | Mason update
 ```sh
+sudo nvim
+
 :Lazy update
 :Lazy sync
+
+:MasonInstallAll
 ```
 
 ## ChatGPT settings

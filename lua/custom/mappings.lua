@@ -6,6 +6,8 @@ M.general = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["|"] = {":vsplit <cr>"},
     ["ge"] = {":Trouble <cr>"},
+    ["gst"] = {":Telescope git_status <cr>"},
+    ["gb"] = {"Telescope git_branch <cr>"},
     ["gpt"] = {":ChatGPT <cr>"}
   },
   i = {
