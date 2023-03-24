@@ -1,8 +1,30 @@
 local overrides = require("custom.configs.overrides")
+local grpconf = require("custom.configs.chatgpt")
 
 ---@type NvPluginSpec[]
 local plugins = {
   -- Override plugin definition options
+
+  {
+    "MunifTanjim/nui.nvim",
+    module = {"nui.layout", "nui.popup"},
+    module_pattern = {"nui.*"}
+  },
+  {
+    "jackMort/ChatGPT.nvim",
+    cmd = "ChatGPT",
+    opt = true,
+    keys = {"<leader>gpt"},
+    module_pattern = {"chatgpt*"},
+    config = function()
+      require('chatgpt').setup(grpconf)
+    end,
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    }
+  },
 
   {
     "folke/trouble.nvim",
