@@ -51,3 +51,16 @@ cd ~/.config/nvim/lua/custom/
 :Lazy update
 :Lazy sync
 ```
+
+## ChatGPT settings
+```sh
+# generate a token https://platform.openai.com/account/api-keys
+
+export OPENAI_API_KEY=""
+
+# ~/.zshrc
+# export OPENAI_API_KEY=""
+
+# hotkey is `gpt`
+# ./lua/custom/mappings.lua
+```
