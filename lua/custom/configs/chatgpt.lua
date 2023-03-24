@@ -64,8 +64,8 @@ local M = {
     yank_last_code = "<C-k>",
     scroll_up = "<C-u>",
     scroll_down = "<C-d>",
-    toggle_settings = "<C-o>",
-    new_session = "<C-.",
+    toggle_settings = "<C-O>",
+    new_session = "<C-o>",
     cycle_windows = "<Tab>",
     -- in the Sessions pane
     select_session = "<Space>",
