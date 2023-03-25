@@ -7,12 +7,11 @@ end
 local b = null_ls.builtins
 
 local sources = {
-
   -- webdev stuff
   b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
   b.formatting.prettier.with {
     bin = "prettierd",
-    filetypes = { "html", "markdown", "css", "ts", "tsx", "vue" }
+    filetypes = { "html", "markdown", "css", "ts", "tsx", "vue", "pcss", "scss" }
   }, -- so prettier works only on these filetypes
 
   -- frontend 
@@ -26,7 +25,6 @@ local sources = {
 
   -- code spell
   b.diagnostics.write_good,
-  b.diagnostics.shellcheck,
 }
 
 null_ls.setup {

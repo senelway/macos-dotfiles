@@ -44,7 +44,6 @@ M.mason = {
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
-    "deno",
     "eslint-lsp",
     "eslint_d",
     "prettier",
@@ -54,6 +53,8 @@ M.mason = {
     -- go lang
     "gopls",
 
+    -- some other stuff
+    "write-good",
   },
 }
 
