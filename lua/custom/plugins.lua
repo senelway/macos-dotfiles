@@ -1,28 +1,37 @@
-local overrides = require("custom.configs.overrides")
-local grpconf = require("custom.configs.chatgpt")
+local overrides = require "custom.configs.overrides"
+local grpconf = require "custom.configs.chatgpt"
 
 ---@type NvPluginSpec[]
 local plugins = {
   -- Override plugin definition options
+  --
+  {
+    "folke/todo-comments.nvim",
+    cmd = { "TodoTelescope" },
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {}
+    end,
+  },
 
   {
     "MunifTanjim/nui.nvim",
-    module = {"nui.layout", "nui.popup"},
-    module_pattern = {"nui.*"}
+    module = { "nui.layout", "nui.popup" },
+    module_pattern = { "nui.*" },
   },
   {
     "jackMort/ChatGPT.nvim",
     cmd = "ChatGPT",
     opt = true,
-    module_pattern = {"chatgpt*"},
+    module_pattern = { "chatgpt*" },
     config = function()
-      require('chatgpt').setup(grpconf)
+      require("chatgpt").setup(grpconf)
     end,
     requires = {
       "MunifTanjim/nui.nvim",
       "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim"
-    }
+      "nvim-telescope/telescope.nvim",
+    },
   },
 
   {
@@ -30,7 +39,7 @@ local plugins = {
     requires = "nvim-tree/nvim-web-devicons",
     config = function()
       require("trouble").setup {}
-    end
+    end,
   },
 
   {
@@ -43,17 +52,16 @@ local plugins = {
     cmd = "Copilot",
     event = "InsertEnter",
     config = function()
-      require("copilot").setup({
+      require("copilot").setup {
         suggestion = {
           auto_trigger = true,
           keymap = {
             accept = "<C-p>",
           },
         },
-      })
+      }
     end,
   },
-
 
   {
     "neovim/nvim-lspconfig",
@@ -75,7 +83,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -102,7 +110,6 @@ local plugins = {
   --   "NvChad/nvim-colorizer.lua",
   --   enabled = false
   -- },
-
 }
 
 return plugins
