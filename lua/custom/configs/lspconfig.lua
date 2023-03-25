@@ -4,7 +4,13 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "clangd", "tailwindcss", "gopls" }
+local servers = {
+  -- frontend 
+  "html", "cssls", "tsserver", "tailwindcss", "volar",
+
+  -- golang
+  "gopls"
+}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -13,8 +19,8 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-lspconfig.eslint.setup({
-  bin = 'eslint_d',
-})
+lspconfig.eslint.setup {
+  bin = "eslint_d",
+}
 
 -- lspconfig.pyright.setup { blabla}
