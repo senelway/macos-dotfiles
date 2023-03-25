@@ -15,7 +15,7 @@ M.treesitter = {
   indent = {
     enable = true,
     disable = {
-      "python"
+      "python",
     },
   },
 }
@@ -29,9 +29,9 @@ M.telescope = {
       "dist/*",
       ".yarn/*",
       ".git/*",
-      ".idea/*"
-     }
-  }
+      ".idea/*",
+    },
+  },
 }
 
 M.mason = {
@@ -49,9 +49,12 @@ M.mason = {
     "prettier",
     "prettierd",
     "tailwindcss-language-server",
+    "vue-langaue-server",
 
     -- go lang
     "gopls",
+    "gofumpt",
+    "goimports",
 
     -- some other stuff
     "write-good",

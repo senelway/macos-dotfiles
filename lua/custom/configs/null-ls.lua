@@ -8,20 +8,21 @@ local b = null_ls.builtins
 
 local sources = {
   -- webdev stuff
-  b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
   b.formatting.prettier.with {
+    -- TODO: migrate to ROME
     bin = "prettierd",
-    filetypes = { "html", "markdown", "css", "ts", "tsx", "vue", "pcss", "scss" }
+    filetypes = { "html", "markdown", "css", "ts", "tsx", "vue", "pcss", "scss" },
   }, -- so prettier works only on these filetypes
 
-  -- frontend 
+  -- frontend
   b.formatting.eslint_d,
 
   -- Lua
   b.formatting.stylua,
 
-  -- cpp
-  b.formatting.clang_format,
+  -- golang
+  b.formatting.gofumpt,
+  b.formatting.goimports,
 
   -- code spell
   b.diagnostics.write_good,
