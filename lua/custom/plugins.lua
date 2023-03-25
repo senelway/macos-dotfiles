@@ -14,7 +14,6 @@ local plugins = {
     "jackMort/ChatGPT.nvim",
     cmd = "ChatGPT",
     opt = true,
-    keys = {"<leader>gpt"},
     module_pattern = {"chatgpt*"},
     config = function()
       require('chatgpt').setup(grpconf)

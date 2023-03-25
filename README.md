@@ -12,18 +12,6 @@ rm -rf ~/.local/share/nvim
 rm -rf ~/.cache/nvim
 ```
 
-## Basic Hotkeys
-```sh
-<leader> is SPACE
-<leader> ch # open cheetshet
-<leader> / # comment line
-<leader> v # open terminal
-ge # show errors
-
->> # or 3>> move line to right
-<< # or 3<< move line to left
-```
-
 ## Config
 ```sh
 cd ~/.config/nvim/lua/custom/
@@ -49,7 +37,7 @@ export OPENAI_API_KEY=""
 # ~/.zshrc
 # export OPENAI_API_KEY=""
 
-# hotkey is `gpt`
+# hotkey is `<leader>gg`
 # ./lua/custom/mappings.lua
 ```
 
@@ -57,7 +45,7 @@ export OPENAI_API_KEY=""
 ```sh
 :set spelllang=en_us,cjk
 [s go to prev spell error
-s] go to next spell error
+]s go to next spell error
 ```
 
 ## Copilot
