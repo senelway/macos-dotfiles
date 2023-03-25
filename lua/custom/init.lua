@@ -6,7 +6,8 @@ local autocmd = vim.api.nvim_create_autocmd
 -- })
 --
 --
--- autocmd("BufWritePre", {
---   pattern = "*.lua",
---   command = "lua vim.lsp.buf.formatting_sync(nil, 1000)",
--- })
+autocmd("BufWritePre", {
+  -- NOTE: add another languages
+  pattern = { "*.lua", "*.go" },
+  command = "lua vim.lsp.buf.formatting(nil)",
+})
