@@ -7,7 +7,18 @@ local autocmd = vim.api.nvim_create_autocmd
 --
 --
 autocmd("BufWritePre", {
-  -- NOTE: add another languages
-  pattern = { "*.lua", "*.go" },
+  pattern = {
+    -- languages
+    "*.lua",
+    "*.go",
+    "*.ts",
+    -- frameworkds
+    "*.vue",
+    "*.tsx",
+    -- styles
+    "*.css",
+    "*.scss",
+    "*.pcss",
+  },
   command = "lua vim.lsp.buf.formatting(nil)",
 })
