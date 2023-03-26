@@ -4,7 +4,6 @@ local grpconf = require "custom.configs.chatgpt"
 ---@type NvPluginSpec[]
 local plugins = {
   -- Override plugin definition options
-  --
   {
     "folke/todo-comments.nvim",
     cmd = { "TodoTelescope" },
