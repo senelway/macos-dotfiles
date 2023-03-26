@@ -85,7 +85,7 @@ M.tabufline = {
     },
 
     -- close buffer + hide terminal buffer
-    ["<leader>x"] = {
+    ["qq"] = {
       function()
         require("nvchad_ui.tabufline").close_buffer()
       end,

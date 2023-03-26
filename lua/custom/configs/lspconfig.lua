@@ -5,11 +5,15 @@ local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
 local servers = {
-  -- frontend 
-  "html", "cssls", "tsserver", "tailwindcss", "volar",
+  -- frontend
+  "html",
+  "cssls",
+  "tsserver",
+  "tailwindcss",
+  "volar",
 
   -- golang
-  "gopls"
+  "gopls",
 }
 
 for _, lsp in ipairs(servers) do
@@ -20,6 +24,8 @@ for _, lsp in ipairs(servers) do
 end
 
 lspconfig.eslint.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
   bin = "eslint_d",
 }
 
