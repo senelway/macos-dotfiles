@@ -22,3 +22,10 @@ autocmd("BufWritePre", {
   },
   command = "lua vim.lsp.buf.formatting(nil)",
 })
+
+autocmd("BufEnter", {
+  pattern = "*",
+  command = "set title",
+})
+
+

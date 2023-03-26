@@ -12,7 +12,7 @@ rm -rf ~/.local/share/nvim
 rm -rf ~/.cache/nvim
 ```
 
-## Config
+## Configuration
 ```sh
 cd ~/.config/nvim/lua/custom/
 # configs/overrides.lu there is a custom config for plugins which includes in configs/plugins.lua
@@ -60,7 +60,7 @@ export OPENAI_API_KEY=""
 ## config in ~/.config/nvim/lua/custom/plugins.lua
 ```
 
-## ITerm2 Config
+## iterm2 Configuration
 ```sh
 ## color preset for iterm (better with recats theme in neovim)
 ## https://github.com/catppuccin/iterm/blob/main/colors/catppuccin-mocha.itermcolors
