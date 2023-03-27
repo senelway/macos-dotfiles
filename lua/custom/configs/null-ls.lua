@@ -26,9 +26,6 @@ local sources = {
   -- golang
   b.formatting.gofumpt,
   b.formatting.goimports,
-
-  -- code spell
-  b.diagnostics.write_good,
 }
 
 null_ls.setup {

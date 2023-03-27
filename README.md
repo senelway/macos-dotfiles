@@ -19,6 +19,11 @@ cd ~/.config/nvim/lua/custom/
 # mappings.lua there is a custom hotkeys
 ```
 
+## Hotkeys
+```sh
+## <leader>ch
+```
+
 ## Plugins | Mason update
 ```sh
 sudo nvim
@@ -27,6 +32,7 @@ sudo nvim
 :Lazy sync
 
 :MasonInstallAll
+:TSInstall vue tsx go
 ```
 ## ChatGPT settings
 ```sh
@@ -54,8 +60,8 @@ export OPENAI_API_KEY=""
 :Copilot auth
 
 ## accpet suggestion
-## Control + p
-## <C+p>
+## Control + v
+## <C+v>
 
 ## config in ~/.config/nvim/lua/custom/plugins.lua
 ```
