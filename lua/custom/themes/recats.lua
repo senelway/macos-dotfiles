@@ -27,7 +27,7 @@ M.base_30 = {
   teal = "#B5E8E0",
   orange = "#F8BD96",
   cyan = "#89DCEB",
-  statusline_bg = "#1E1D2D",
+  statusline_bg = "#191828",
   lightbg = "#2f2e3e",
   pmenu_bg = "#ABE9B3",
   folder_bg = "#89B4FA",
@@ -35,7 +35,7 @@ M.base_30 = {
 }
 
 M.base_16 = {
-  base00 = "#1e1e2e", -- base
+  base00 = "#1E1D2D", -- base
   base01 = "#181825", -- mantle
   base02 = "#313244", -- surface0
   base03 = "#494d64", -- surface1

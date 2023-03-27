@@ -9,8 +9,9 @@ local servers = {
   "html",
   "cssls",
   "tsserver",
-  "tailwindcss",
+  -- "tailwindcss",
   "volar",
+  "tailwindcss",
 
   -- golang
   "gopls",
