@@ -55,7 +55,7 @@ local plugins = {
         suggestion = {
           auto_trigger = true,
           keymap = {
-            accept = "<C-p>",
+            accept = "<C-v>",
           },
         },
       }

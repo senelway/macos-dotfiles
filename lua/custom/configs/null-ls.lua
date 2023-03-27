@@ -12,6 +12,9 @@ local sources = {
     -- TODO: migrate to ROME
     bin = "prettierd",
     filetypes = { "html", "markdown", "css", "ts", "tsx", "vue", "pcss", "scss" },
+    cli_options = {
+      config_precedence = "prefer-file",
+    },
   }, -- so prettier works only on these filetypes
 
   -- frontend

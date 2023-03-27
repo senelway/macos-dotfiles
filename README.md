@@ -44,8 +44,8 @@ export OPENAI_API_KEY=""
 ## Spellcheck
 ```sh
 :set spelllang=en_us,cjk
-[s go to prev spell error
-]s go to next spell error
+## [s go to prev spell error
+## ]s go to next spell error
 ```
 
 ## Copilot
