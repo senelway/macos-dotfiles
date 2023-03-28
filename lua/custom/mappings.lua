@@ -7,6 +7,7 @@ M.general = {
     ["|"] = { "<cmd> vsplit <cr>" },
     ["="] = { "<cmd> close <cr>" },
     ["<leader>we"] = { "<cmd> set spell <cr>", "spell check" },
+    ["<leader>go"] = { "<cmd> GHOpen <cr>", "github open" },
   },
   i = {
     ["jj"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },

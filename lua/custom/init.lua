@@ -48,8 +48,7 @@ vim.api.nvim_create_user_command("GHOpen", function()
     remote = string.gsub(remote, ".git$", "")
   end
 
-  local path = string.format("%s/three/%s", remote)
-  local url = string.format('open "%s"', path)
+  local url = string.format('open "%s"', remote)
 
   os.execute(url)
 end, { nargs = 0 })
