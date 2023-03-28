@@ -55,6 +55,10 @@ M.mason = {
     "gopls",
     "gofumpt",
     "goimports",
+
+    -- NOTE: c#
+    -- "csharp-language-server",
+    -- "csharpier"
   },
 }
 

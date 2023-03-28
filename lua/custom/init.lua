@@ -6,25 +6,29 @@ local autocmd = vim.api.nvim_create_autocmd
 -- })
 --
 --
+local patterns = {
+  -- languages
+  "*.lua",
+  "*.go",
+  "*.ts",
+  -- frameworkds
+  "*.vue",
+  "*.tsx",
+  -- styles
+  "*.css",
+  "*.scss",
+  "*.pcss",
+  -- NOTE: c#
+  -- "*.cs",
+}
+
 autocmd("BufWritePre", {
-  pattern = {
-    -- languages
-    "*.lua",
-    "*.go",
-    "*.ts",
-    -- frameworkds
-    "*.vue",
-    "*.tsx",
-    -- styles
-    "*.css",
-    "*.scss",
-    "*.pcss",
-  },
+  pattern = patterns,
   command = "lua vim.lsp.buf.formatting(nil)",
 })
 
 autocmd("BufEnter", {
-  pattern = "*",
+  pattern = patterns,
   command = "set title | set relativenumber",
 })
 
@@ -44,8 +48,7 @@ vim.api.nvim_create_user_command("GHOpen", function()
     remote = string.gsub(remote, ".git$", "")
   end
 
-  local path = string.format("%s/three/%s", remote)
-  local url = string.format('open "%s"', path)
+  local url = string.format('open "%s"', remote)
 
   os.execute(url)
 end, { nargs = 0 })

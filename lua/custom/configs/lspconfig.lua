@@ -15,6 +15,9 @@ local servers = {
 
   -- golang
   "gopls",
+
+  -- NOTE: c#
+  -- "csharp",
 }
 
 for _, lsp in ipairs(servers) do

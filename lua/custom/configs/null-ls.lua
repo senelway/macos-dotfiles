@@ -26,6 +26,9 @@ local sources = {
   -- golang
   b.formatting.gofumpt,
   b.formatting.goimports,
+
+  -- NOTE: c#
+  -- b.formatting.csharpier
 }
 
 null_ls.setup {
