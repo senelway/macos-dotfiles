@@ -6,25 +6,27 @@ local autocmd = vim.api.nvim_create_autocmd
 -- })
 --
 --
+local patterns = {
+  -- languages
+  "*.lua",
+  "*.go",
+  "*.ts",
+  -- frameworkds
+  "*.vue",
+  "*.tsx",
+  -- styles
+  "*.css",
+  "*.scss",
+  "*.pcss",
+}
+
 autocmd("BufWritePre", {
-  pattern = {
-    -- languages
-    "*.lua",
-    "*.go",
-    "*.ts",
-    -- frameworkds
-    "*.vue",
-    "*.tsx",
-    -- styles
-    "*.css",
-    "*.scss",
-    "*.pcss",
-  },
+  pattern = patterns,
   command = "lua vim.lsp.buf.formatting(nil)",
 })
 
 autocmd("BufEnter", {
-  pattern = "*",
+  pattern = patterns,
   command = "set title | set relativenumber",
 })
 
