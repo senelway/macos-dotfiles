@@ -18,6 +18,8 @@ local patterns = {
   "*.css",
   "*.scss",
   "*.pcss",
+  -- NOTE: c#
+  -- "*.cs",
 }
 
 autocmd("BufWritePre", {
