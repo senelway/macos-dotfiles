@@ -282,6 +282,28 @@ M.telescope = {
 M.nvterm = {
   plugin = true,
 
+  t = {
+
+    ["<leader>i"] = {
+      function()
+        require("nvterm.terminal").toggle "float"
+      end,
+      "toggle floating term",
+    },
+    ["<leader>h"] = {
+      function()
+        require("nvterm.terminal").toggle "horizontal"
+      end,
+      "toggle horizontal term",
+    },
+    ["<leader>v"] = {
+      function()
+        require("nvterm.terminal").toogle "vertical"
+      end,
+      "toggle vertical term",
+    },
+  },
+
   n = {
     ["<leader>i"] = {
       function()
@@ -292,6 +314,12 @@ M.nvterm = {
 
     ["<leader>h"] = {
       function()
+        require("nvterm.terminal").toggle "horizontal"
+      end,
+      "toggle horizontal term",
+    },
+    ["<leader>H"] = {
+      function()
         require("nvterm.terminal").new "horizontal"
       end,
       "new horizontal term",
@@ -299,9 +327,9 @@ M.nvterm = {
 
     ["<leader>v"] = {
       function()
-        require("nvterm.terminal").new "vertical"
+        require("nvterm.terminal").toogle "vertical"
       end,
-      "new vertical term",
+      "toggle vertical term",
     },
   },
 }
