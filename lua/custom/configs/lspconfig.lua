@@ -27,10 +27,4 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-lspconfig.eslint.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  bin = "eslint_d",
-}
-
 -- lspconfig.pyright.setup { blabla}

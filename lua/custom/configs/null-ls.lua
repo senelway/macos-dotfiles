@@ -19,6 +19,7 @@ local sources = {
 
   -- frontend
   b.formatting.eslint_d,
+  b.diagnostics.eslint_d,
 
   -- Lua
   b.formatting.stylua,
@@ -31,7 +32,23 @@ local sources = {
   -- b.formatting.csharpier
 }
 
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
 null_ls.setup {
   debug = true,
   sources = sources,
+  on_attach = function(client, bufnr)
+    if client.supports_method "textDocument/formatting" then
+      vim.api.nvim_clear_autocmds { group = augroup, buffer = bufnr }
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        group = augroup,
+        buffer = bufnr,
+        callback = vim.lsp.buf.formatting,
+      })
+    end
+    vim.api.nvim_create_autocmd("ExitPre", {
+      group = augroup,
+      command = "silent !eslint_d restart",
+    })
+  end,
 }

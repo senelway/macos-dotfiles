@@ -21,12 +21,6 @@ local patterns = {
   -- NOTE: c#
   -- "*.cs",
 }
-
-autocmd("BufWritePre", {
-  pattern = patterns,
-  command = "lua vim.lsp.buf.formatting(nil)",
-})
-
 autocmd("BufEnter", {
   pattern = patterns,
   command = "set title | set relativenumber",
