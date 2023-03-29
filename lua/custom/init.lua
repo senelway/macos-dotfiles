@@ -21,15 +21,13 @@ local patterns = {
   -- NOTE: c#
   -- "*.cs",
 }
-
-autocmd("BufWritePre", {
-  pattern = patterns,
-  command = "lua vim.lsp.buf.formatting(nil)",
-})
-
 autocmd("BufEnter", {
   pattern = patterns,
   command = "set title | set relativenumber",
+})
+
+autocmd("ExitPre", {
+  command = "silent !eslint_d restart",
 })
 
 vim.api.nvim_create_user_command("GHOpen", function()
