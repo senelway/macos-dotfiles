@@ -46,5 +46,8 @@ null_ls.setup {
         callback = vim.lsp.buf.formatting,
       })
     end
+    vim.api.nvim_create_autocmd("ExitPre", {
+      command = "silent !eslint_d restart",
+    })
   end,
 }
