@@ -47,6 +47,7 @@ null_ls.setup {
       })
     end
     vim.api.nvim_create_autocmd("ExitPre", {
+      group = augroup,
       command = "silent !eslint_d restart",
     })
   end,
