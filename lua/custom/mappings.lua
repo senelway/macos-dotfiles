@@ -34,4 +34,10 @@ M.Trouble = {
   },
 }
 
+M.SymbolsOutline = {
+  n = {
+    ["<leader>so"] = { "<cmd> SymbolsOutline <cr>", "symbols outline" },
+  },
+}
+
 return M

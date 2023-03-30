@@ -32,6 +32,8 @@ M.telescope = {
       ".idea/*",
     },
   },
+  extensions = {
+  },
 }
 
 M.mason = {

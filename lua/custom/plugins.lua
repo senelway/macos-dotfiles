@@ -4,6 +4,24 @@ local grpconf = require "custom.configs.chatgpt"
 ---@type NvPluginSpec[]
 local plugins = {
   -- Override plugin definition options
+  --
+  {
+
+    "simrat39/symbols-outline.nvim",
+    cmd = "SymbolsOutline",
+    config = function()
+      require("symbols-outline").setup {}
+    end,
+  },
+
+  {
+    "liuchengxu/vista.vim",
+    cmd = "Vista",
+    config = function()
+      require("vista").setup()
+    end,
+  },
+
   {
     "folke/todo-comments.nvim",
     cmd = { "TodoTelescope" },

@@ -21,6 +21,7 @@ local patterns = {
   -- NOTE: c#
   -- "*.cs",
 }
+
 autocmd("BufEnter", {
   pattern = patterns,
   command = "set title | set relativenumber",
