@@ -15,14 +15,6 @@ local plugins = {
   },
 
   {
-    "liuchengxu/vista.vim",
-    cmd = "Vista",
-    config = function()
-      require("vista").setup()
-    end,
-  },
-
-  {
     "folke/todo-comments.nvim",
     cmd = { "TodoTelescope" },
     requires = "nvim-lua/plenary.nvim",
