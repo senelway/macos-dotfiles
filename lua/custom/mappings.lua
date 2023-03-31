@@ -7,6 +7,8 @@ M.general = {
     ["|"] = { "<cmd> vsplit <cr>" },
     ["="] = { "<cmd> close <cr>" },
     ["<leader>we"] = { "<cmd> set spell <cr>", "spell check" },
+
+    -- custome methods
     ["<leader>go"] = { "<cmd> GHOpen <cr>", "github open" },
   },
   i = {
@@ -14,6 +16,9 @@ M.general = {
     ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
     ["kk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
   },
+  v = {
+    ["<C-o>"] = { "<cmd> LinkOpen <cr>", "browser open" },
+  }
 }
 
 M.TodoTelescope = {
