@@ -15,7 +15,7 @@ local options = {
   view = {
     adaptive_size = false,
     side = "left",
-    width = 25,
+    width = 30,
     hide_root_folder = true,
   },
   git = {
@@ -32,10 +32,10 @@ local options = {
   },
   renderer = {
     highlight_git = false,
-    highlight_opened_files = "always",
+    highlight_opened_files = "none",
 
     indent_markers = {
-      enable = true,
+      enable = false,
     },
 
     icons = {
@@ -43,7 +43,7 @@ local options = {
         file = true,
         folder = true,
         folder_arrow = true,
-        git = true,
+        git = false,
       },
 
       glyphs = {
@@ -60,11 +60,11 @@ local options = {
           arrow_closed = "",
         },
         git = {
-          unstaged = "*",
+          unstaged = "✗",
           staged = "✓",
           unmerged = "",
           renamed = "➜",
-          untracked = "",
+          untracked = "★",
           deleted = "",
           ignored = "◌",
         },
@@ -72,7 +72,5 @@ local options = {
     },
   },
 }
-
-vim.g.nvimtree_side = options.view.side
 
 return options

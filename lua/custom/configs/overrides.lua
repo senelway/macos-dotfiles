@@ -31,9 +31,9 @@ M.telescope = {
       ".git/*",
       ".idea/*",
     },
+    prompt_prefix = " ",
   },
-  extensions = {
-  },
+  extensions = {},
 }
 
 M.mason = {
@@ -70,12 +70,26 @@ M.nvimtree = {
     enable = true,
   },
 
+  view = {
+    width = 25,
+  },
+
   renderer = {
     highlight_git = true,
+    highlight_opened_files = "always",
     icons = {
       show = {
-        git = true,
+        git = false,
       },
+      glyphs = {
+        git = {
+          unstaged = "*",
+          untracked = "",
+        },
+      },
+    },
+    indent_markers = {
+      enable = true,
     },
   },
 }
