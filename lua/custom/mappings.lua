@@ -40,4 +40,40 @@ M.SymbolsOutline = {
   },
 }
 
+M.tabufline = {
+  n = {
+    ["qq"] = {
+      function()
+        require("nvchad_ui.tabufline").close_buffer()
+      end,
+      "close buffer",
+    },
+  },
+}
+
+M.telescope = {
+  n = {
+    ["<leader>gbb"] = { "<cmd> Telescope git_branches <CR>", "git branches" },
+  },
+}
+
+M.nvterm = {
+  t = {
+    ["<leader>i"] = {
+      function()
+        require("nvterm.terminal").toggle "float"
+      end,
+      "toggle floating term",
+    },
+  },
+  n = {
+    ["<leader>i"] = {
+      function()
+        require("nvterm.terminal").toggle "float"
+      end,
+      "toggle floating term",
+    },
+  },
+}
+
 return M

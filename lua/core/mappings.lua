@@ -85,7 +85,7 @@ M.tabufline = {
     },
 
     -- close buffer + hide terminal buffer
-    ["qq"] = {
+    ["<leader>x"] = {
       function()
         require("nvchad_ui.tabufline").close_buffer()
       end,
@@ -186,7 +186,7 @@ M.lspconfig = {
 
     ["<leader>f"] = {
       function()
-        vim.diagnostic.open_float()
+        vim.diagnostic.open_float { border = "rounded" }
       end,
       "floating diagnostic",
     },
@@ -269,7 +269,6 @@ M.telescope = {
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "git commits" },
     ["<leader>gt"] = { "<cmd> Telescope git_status <CR>", "git status" },
-    ["<leader>gbb"] = { "<cmd> Telescope git_branches <CR>", "git branches" },
 
     -- pick a hidden term
     ["<leader>pt"] = { "<cmd> Telescope terms <CR>", "pick hidden term" },
@@ -283,42 +282,55 @@ M.nvterm = {
   plugin = true,
 
   t = {
-
-    ["<leader>i"] = {
+    -- toggle in terminal mode
+    ["<A-i>"] = {
       function()
         require("nvterm.terminal").toggle "float"
       end,
       "toggle floating term",
     },
-    ["<leader>h"] = {
+
+    ["<A-h>"] = {
       function()
         require("nvterm.terminal").toggle "horizontal"
       end,
       "toggle horizontal term",
     },
-    ["<leader>v"] = {
+
+    ["<A-v>"] = {
       function()
-        require("nvterm.terminal").toogle "vertical"
+        require("nvterm.terminal").toggle "vertical"
       end,
       "toggle vertical term",
     },
   },
 
   n = {
-    ["<leader>i"] = {
+    -- toggle in normal mode
+    ["<A-i>"] = {
       function()
         require("nvterm.terminal").toggle "float"
       end,
       "toggle floating term",
     },
 
-    ["<leader>h"] = {
+    ["<A-h>"] = {
       function()
         require("nvterm.terminal").toggle "horizontal"
       end,
       "toggle horizontal term",
     },
-    ["<leader>H"] = {
+
+    ["<A-v>"] = {
+      function()
+        require("nvterm.terminal").toggle "vertical"
+      end,
+      "toggle vertical term",
+    },
+
+    -- new
+
+    ["<leader>h"] = {
       function()
         require("nvterm.terminal").new "horizontal"
       end,
@@ -327,9 +339,9 @@ M.nvterm = {
 
     ["<leader>v"] = {
       function()
-        require("nvterm.terminal").toogle "vertical"
+        require("nvterm.terminal").new "vertical"
       end,
-      "toggle vertical term",
+      "new vertical term",
     },
   },
 }
