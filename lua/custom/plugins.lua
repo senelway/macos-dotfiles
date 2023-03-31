@@ -1,5 +1,4 @@
 local overrides = require "custom.configs.overrides"
-local grpconf = require "custom.configs.chatgpt"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -33,7 +32,7 @@ local plugins = {
     opt = true,
     module_pattern = { "chatgpt*" },
     config = function()
-      require("chatgpt").setup(grpconf)
+      require("chatgpt").setup {}
     end,
     requires = {
       "MunifTanjim/nui.nvim",
