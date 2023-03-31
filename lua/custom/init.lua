@@ -29,4 +29,4 @@ vim.api.nvim_create_user_command("GHOpen", function()
   local url = string.format('open "%s"', remote)
 
   os.execute(url)
-end, { nargs = 0 })
+end, {})

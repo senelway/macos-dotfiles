@@ -9,8 +9,9 @@ M.treesitter = {
     "javascript",
     "typescript",
     "c",
+    "tsx",
+    "scss",
     "markdown",
-    "markdown_inline",
   },
   indent = {
     enable = true,
@@ -51,7 +52,7 @@ M.mason = {
     "prettier",
     "prettierd",
     "tailwindcss-language-server",
-    "vue-language-server",
+    -- "vue-language-server",
 
     -- go lang
     "gopls",
@@ -79,7 +80,7 @@ M.nvimtree = {
     highlight_opened_files = "always",
     icons = {
       show = {
-        git = false,
+        git = true,
       },
       glyphs = {
         git = {
