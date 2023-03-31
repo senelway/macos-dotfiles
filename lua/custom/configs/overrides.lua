@@ -81,16 +81,15 @@ M.nvimtree = {
       show = {
         git = false,
       },
+      glyphs = {
+        git = {
+          unstaged = "*",
+          untracked = "",
+        },
+      },
     },
     indent_markers = {
       enable = true,
-    },
-  },
-
-  glyphs = {
-    git = {
-      unstaged = "*",
-      untracked = "",
     },
   },
 }
