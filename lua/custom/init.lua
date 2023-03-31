@@ -9,6 +9,7 @@
 
 vim.opt.relativenumber = true
 vim.opt.title = true
+vim.g.vscode_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/snippets"
 
 local browserOpen = function(link)
   local url = string.format('open "%s"', link)
