@@ -6,7 +6,6 @@ local plugins = {
   -- Override plugin definition options
   --
   {
-
     "simrat39/symbols-outline.nvim",
     cmd = "SymbolsOutline",
     config = function()

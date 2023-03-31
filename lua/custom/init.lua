@@ -1,4 +1,4 @@
-local autocmd = vim.api.nvim_create_autocmd
+-- local autocmd = vim.api.nvim_create_autocmd
 -- Auto resize panes when resizing nvim window
 -- autocmd("VimResized", {
 --   pattern = "*",
@@ -6,26 +6,9 @@ local autocmd = vim.api.nvim_create_autocmd
 -- })
 --
 --
-local patterns = {
-  -- languages
-  "*.lua",
-  "*.go",
-  "*.ts",
-  -- frameworkds
-  "*.vue",
-  "*.tsx",
-  -- styles
-  "*.css",
-  "*.scss",
-  "*.pcss",
-  -- NOTE: c#
-  -- "*.cs",
-}
 
-autocmd("BufEnter", {
-  pattern = patterns,
-  command = "set title | set relativenumber",
-})
+vim.opt.relativenumber = true
+vim.opt.title = true
 
 vim.api.nvim_create_user_command("GHOpen", function()
   local remote = vim.fn.system "git ls-remote --get-url origin"
