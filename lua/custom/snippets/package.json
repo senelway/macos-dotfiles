@@ -1,0 +1,12 @@
+{
+	"name": "recats-snippets",
+	"contributes": {
+		"snippets": [
+			{
+        "example": "https://github.com/ults-io/vscode-react-javascript-snippets/blob/master/src/snippets/generated.json",
+				"language": ["typescriptreact"],
+				"path": "./tsx.json"
+			}
+		]
+	}
+}
