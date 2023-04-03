@@ -13,6 +13,7 @@ M.load = function()
   vim.api.nvim_create_user_command("GithubOpen", function()
     local remote = vim.fn.system "git ls-remote --get-url origin"
     local branch = vim.fn.system "git rev-parse --abbrev-ref HEAD"
+    local path = vim.fn.expand "%:."
 
     if string.match(remote, ".*[github].*") == false then
       print "Not a github or gitlab repo"
@@ -28,6 +29,11 @@ M.load = function()
 
     if branch then
       branch = trim(branch)
+    end
+
+    if string.match(path, ".") then
+      remote = remote .. "/blob/" .. branch .. "/" .. path
+    else
       remote = remote .. "/tree/" .. branch
     end
 
