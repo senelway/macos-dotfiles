@@ -9,7 +9,7 @@ M.general = {
     ["<leader>we"] = { "<cmd> set spell <cr>", "spell check" },
 
     -- custome methods
-    ["<leader>go"] = { "<cmd> GHOpen <cr>", "github open" },
+    ["<leader>go"] = { "<cmd> GithubOpen <cr>", "github open" },
   },
   i = {
     ["jj"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
@@ -18,7 +18,7 @@ M.general = {
   },
   v = {
     ["<C-o>"] = { "<cmd> LinkOpen <cr>", "browser open" },
-  }
+  },
 }
 
 M.TodoTelescope = {
