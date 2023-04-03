@@ -148,3 +148,7 @@ colors:
 ```
 
 [~/.config/alacritty/catppuccin](https://github.com/catppuccin/alacritty)
+
+## Fonts 
+[JeBrainsMono-Nord-font.zip](https://github.com/recats/neovim-nvchad/files/11135856/JeBrainsMono-Nord-font.zip)
+
