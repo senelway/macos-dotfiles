@@ -85,7 +85,7 @@ export OPENAI_API_KEY=""
 
 ## iterm2 Configuration
 
-we do not recommend use iterm2, isntead you could use [kitty](https://github.com/kovidgoyal/kitty)
+> we could not recommend to use iterm2, better to use [kitty](https://github.com/kovidgoyal/kitty) instead
 
 ```sh
 ## color preset for iterm (better with recats theme in neovim)
@@ -109,4 +109,5 @@ tab_powerline_style         slanted
 tab_title_template          {title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}
 font_features FiraCode-Retina +cv02 +cv05 +cv09 +cv14 +ss04 +cv16 +cv31 +cv25 +cv26 +cv32 +cv28 +ss10 +zero +onum
 ```
+
 [~/.config/kitty/theme.conf](https://github.com/catppuccin/kitty/blob/main/themes/mocha.conf)
