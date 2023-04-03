@@ -11,7 +11,7 @@ M.treesitter = {
     "c",
     "tsx",
     "scss",
-    "markdown",
+    -- "markdown",
   },
   indent = {
     enable = true,
