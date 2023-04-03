@@ -122,7 +122,7 @@ map cmd+d new_window
 
 ```yml
 import:
-  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml 
 font:
   normal:
     family: "JetBrainsMono Nerd Font"
@@ -137,14 +137,27 @@ font:
     family: "JetBrainsMono Nerd Font"
     style: "Light italic"
 
-  size: 12.0
+  offset:
+    x: 0
+    y: 0
+      
+  size: 11.0
 
 custom_cursor_colors: true
+
+window:
+  decorations: buttonless
+  dynamic_padding: false
 
 colors:
   cursor:
     text: "#1E1E2E" # base
     cursor: "#00ffcb" # rosewater
+
+key_bindings:
+  - { key: V,        mods: Command,       action: Paste                        }
+  - { key: C,        mods: Command,       action: Copy                         }
+  - { key: Return,   mods: Command,       action: ToggleFullscreen             }
 ```
 
 [~/.config/alacritty/catppuccin](https://github.com/catppuccin/alacritty)
