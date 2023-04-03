@@ -85,7 +85,7 @@ export OPENAI_API_KEY=""
 
 ## iterm2 Configuration
 
-> we could not recommend to use iterm2, better to use [kitty](https://github.com/kovidgoyal/kitty) instead
+> we could not recommend to use iterm2, better to use [kitty](https://github.com/kovidgoyal/kitty) or [alacritty](https://github.com/alacritty/alacritty) instead
 
 ```sh
 ## color preset for iterm (better with recats theme in neovim)
@@ -97,9 +97,10 @@ export OPENAI_API_KEY=""
 ~/.config/kitty/kitty.conf
 
 ```sh
-font_family Fira Code
+font_family JetBrainsMono Nerd Font
 font_size 12.0
-symbol_map U+23FB-U+23FE,U+2665,U+26A1,U+2B58,U+E000-U+E00A,U+E0A0-U+E0A3,U+E0B0-U+E0C8,U+E0CA,U+E0CC-U+E0D2,U+E0D4,U+E200-U+E2A9,U+E300-U+E3E3,U+E5FA-U+E634,U+E700-U+E7C5,U+EA60-U+EBEB,U+F000-U+F2E0,U+F300-U+F32F,U+F400-U+F4A9,U+F500-U+F8FF,U+F06E6 Symbols Nerd Font Mono
+# https://github.com/kovidgoyal/kitty/blob/master/nerd-fonts-glyphs.txt
+
 cursor #00ffcb
 cursor_text_color #000002
 tab_bar_min_tabs            1
@@ -108,6 +109,42 @@ tab_bar_style               powerline
 tab_powerline_style         slanted
 tab_title_template          {title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}
 font_features FiraCode-Retina +cv02 +cv05 +cv09 +cv14 +ss04 +cv16 +cv31 +cv25 +cv26 +cv32 +cv28 +ss10 +zero +onum
+
+map cmd+enter toggle_fullscreen
+map cmd+d new_window
 ```
 
 [~/.config/kitty/theme.conf](https://github.com/catppuccin/kitty/blob/main/themes/mocha.conf)
+
+## Alacritty config
+
+~/.config/alacritty/alacritty.yml
+
+```yml
+import:
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+font:
+  normal:
+    family: "JetBrainsMono Nerd Font"
+    style: "ExtraLight"
+  italic:
+    family: "JetBrainsMono Nerd Font"
+    style: "ExtraLight italic"
+  bold:
+    family: "JetBrainsMono Nerd Font"
+    style: "Light"
+  bold_italic:
+    family: "JetBrainsMono Nerd Font"
+    style: "Light italic"
+
+  size: 12.0
+
+custom_cursor_colors: true
+
+colors:
+  cursor:
+    text: "#1E1E2E" # base
+    cursor: "#00ffcb" # rosewater
+```
+
+[~/.config/alacritty/catppuccin](https://github.com/catppuccin/alacritty)
