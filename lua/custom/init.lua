@@ -16,6 +16,11 @@ local browserOpen = function(link)
   os.execute(url)
 end
 
+-- autocmd("BufReadPre,FileReadPre", {
+--   pattern = "*",
+--   command = "NvimTreeToggle",
+-- })
+
 vim.api.nvim_create_user_command("GHOpen", function()
   local remote = vim.fn.system "git ls-remote --get-url origin"
   -- local branch = vim.fn.system "git rev-parse --abbrev-ref HEAD"
