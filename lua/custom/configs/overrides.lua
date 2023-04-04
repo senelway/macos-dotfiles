@@ -52,7 +52,7 @@ M.mason = {
     "prettier",
     "prettierd",
     "tailwindcss-language-server",
-    -- "vue-language-server",
+    "vue-language-server",
 
     -- go lang
     "gopls",

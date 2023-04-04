@@ -83,7 +83,10 @@ export OPENAI_API_KEY=""
 ## config in ~/.config/nvim/lua/custom/plugins.lua
 ```
 
-## iterm2 Configuration
+## Terminal
+
+<details>
+  <summary>ITerm2</summary>
 
 > we could not recommend to use iterm2, better to use [kitty](https://github.com/kovidgoyal/kitty) or [alacritty](https://github.com/alacritty/alacritty) instead
 
@@ -92,15 +95,17 @@ export OPENAI_API_KEY=""
 ## https://github.com/catppuccin/iterm/blob/main/colors/catppuccin-mocha.itermcolors
 ```
 
-## Kitty config
+</details>
+<details>
+  <summary>Kitty</summary>
 
 ~/.config/kitty/kitty.conf
 
 ```sh
 font_family JetBrainsMono Nerd Font
 font_size 12.0
-# https://github.com/kovidgoyal/kitty/blob/master/nerd-fonts-glyphs.txt
 
+# https://github.com/kovidgoyal/kitty/blob/master/nerd-fonts-glyphs.txt
 cursor #00ffcb
 cursor_text_color #000002
 tab_bar_min_tabs            1
@@ -116,33 +121,44 @@ map cmd+d new_window
 
 [~/.config/kitty/theme.conf](https://github.com/catppuccin/kitty/blob/main/themes/mocha.conf)
 
-## Alacritty config
+</details>
+
+<details>
+  <summary>Alacritty</summary>
 
 ~/.config/alacritty/alacritty.yml
 
 ```yml
 import:
-  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml 
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
 font:
   normal:
-    family: "JetBrainsMono Nerd Font"
-    style: "ExtraLight"
-  italic:
-    family: "JetBrainsMono Nerd Font"
-    style: "ExtraLight italic"
-  bold:
-    family: "JetBrainsMono Nerd Font"
+    family: "FiraCode Nerd Font"
     style: "Light"
-  bold_italic:
-    family: "JetBrainsMono Nerd Font"
-    style: "Light italic"
-
+  bold:
+    family: "FiraCode Nerd Font"
+    style: "Regular"
+  #normal:
+  #  family: "JetBrainsMono Nerd Font"
+  #  style: "ExtraLight"
+  #italic:
+  #  family: "JetBrainsMono Nerd Font"
+    style: "ExtraLight italic"
+  #bold:
+  #  family: "JetBrainsMono Nerd Font"
+    style: "Light"
+  #bold_italic:
+  #  family: "JetBrainsMono Nerd Font"
+  #  style: "Light italic"
   offset:
     x: 0
-    y: 0
-      
+    y: 5
+
   size: 11.0
 
+# better font view
+# defaults -currentHost write -g AppleFontSmoothing -int 0
+#
 custom_cursor_colors: true
 
 window:
@@ -151,8 +167,8 @@ window:
 
 colors:
   cursor:
-    text: "#1E1E2E" # base
-    cursor: "#00ffcb" # rosewater
+    text: "#1E1E2E"
+    cursor: "#00ffcb"
 
 key_bindings:
   - { key: V,        mods: Command,       action: Paste                        }
@@ -162,6 +178,9 @@ key_bindings:
 
 [~/.config/alacritty/catppuccin](https://github.com/catppuccin/alacritty)
 
-## Fonts 
-[JeBrainsMono-Nord-font.zip](https://github.com/recats/neovim-nvchad/files/11135856/JeBrainsMono-Nord-font.zip)
+</details>
 
+## Fonts
+
+[Fira-Code-Nerd-font.zip](https://github.com/recats/neovim-nvchad/files/11148957/fira-code.zip)
+[JeBrainsMono-Nerd-font.zip](https://github.com/recats/neovim-nvchad/files/11135856/JeBrainsMono-Nord-font.zip)

@@ -9,7 +9,6 @@ local servers = {
   "html",
   "cssls",
   "tsserver",
-  -- "tailwindcss",
   "volar",
   "tailwindcss",
 

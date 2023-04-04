@@ -328,8 +328,6 @@ M.nvterm = {
       "toggle vertical term",
     },
 
-    -- new
-
     ["<leader>h"] = {
       function()
         require("nvterm.terminal").new "horizontal"
