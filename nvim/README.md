@@ -3,7 +3,6 @@
 ```sh
 brew install neovim
 brew install ripgrep # is required for grep searching with Telescope (OPTIONAL).
-git clone git@github.com:senelway/.config.git ~/.config --depth 1 && nvim
 ```
 
 ## Uninstall
@@ -96,92 +95,3 @@ export OPENAI_API_KEY=""
 ```
 
 </details>
-<details>
-  <summary>Kitty</summary>
-
-~/.config/kitty/kitty.conf
-
-```sh
-font_family JetBrainsMono Nerd Font
-font_size 12.0
-
-# https://github.com/kovidgoyal/kitty/blob/master/nerd-fonts-glyphs.txt
-cursor #00ffcb
-cursor_text_color #000002
-tab_bar_min_tabs            1
-tab_bar_edge                bottom
-tab_bar_style               powerline
-tab_powerline_style         slanted
-tab_title_template          {title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}
-font_features FiraCode-Retina +cv02 +cv05 +cv09 +cv14 +ss04 +cv16 +cv31 +cv25 +cv26 +cv32 +cv28 +ss10 +zero +onum
-
-map cmd+enter toggle_fullscreen
-map cmd+d new_window
-```
-
-[~/.config/kitty/theme.conf](https://github.com/catppuccin/kitty/blob/main/themes/mocha.conf)
-
-</details>
-
-<details>
-  <summary>Alacritty</summary>
-
-~/.config/alacritty/alacritty.yml
-
-```yml
-import:
-  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
-font:
-  normal:
-    family: "FiraCode Nerd Font"
-    style: "Light"
-  bold:
-    family: "FiraCode Nerd Font"
-    style: "Regular"
-  #normal:
-  #  family: "JetBrainsMono Nerd Font"
-  #  style: "ExtraLight"
-  #italic:
-  #  family: "JetBrainsMono Nerd Font"
-    style: "ExtraLight italic"
-  #bold:
-  #  family: "JetBrainsMono Nerd Font"
-    style: "Light"
-  #bold_italic:
-  #  family: "JetBrainsMono Nerd Font"
-  #  style: "Light italic"
-  offset:
-    x: 0
-    y: 5
-
-  size: 11.0
-
-# better font view
-# defaults -currentHost write -g AppleFontSmoothing -int 0
-#
-custom_cursor_colors: true
-
-window:
-  decorations: buttonless
-  dynamic_padding: false
-
-colors:
-  cursor:
-    text: "#1E1E2E"
-    cursor: "#00ffcb"
-
-key_bindings:
-  - { key: V,        mods: Command,       action: Paste                        }
-  - { key: C,        mods: Command,       action: Copy                         }
-  - { key: Return,   mods: Command,       action: ToggleFullscreen             }
-```
-
-[~/.config/alacritty/catppuccin](https://github.com/catppuccin/alacritty)
-
-</details>
-
-## Fonts
-
-[Fira-Code-Nerd-font.zip](https://github.com/recats/neovim-nvchad/files/11148957/fira-code.zip)
-
-[JeBrainsMono-Nerd-font.zip](https://github.com/recats/neovim-nvchad/files/11135856/JeBrainsMono-Nord-font.zip)
