@@ -35,7 +35,8 @@ M.ChatGPT = {
 
 M.Trouble = {
   n = {
-    ["<leader>fe"] = { "<cmd> Trouble <cr>", "find errors" },
+    ["<leader>fe"] = { "<cmd> Trouble <cr>", "find errors file" },
+    ["<leader>fE"] = { "<cmd> Trouble workspace_diagnostics <cr>", "find errors in workspace" },
   },
 }
 

@@ -44,15 +44,24 @@ M.mason = {
     "stylua",
 
     -- web dev stuff
-    "css-lsp",
     "html-lsp",
     "typescript-language-server",
+    "vue-language-server",
+
     "eslint-lsp",
     "eslint_d",
+
     "prettier",
     "prettierd",
+
+    -- style
+    "css-lsp",
     "tailwindcss-language-server",
-    "vue-language-server",
+    -- "unocss-language-server",
+
+    -- rust
+    -- "rust-analyzer",
+    -- "rustfmt"
 
     -- go lang
     "gopls",
