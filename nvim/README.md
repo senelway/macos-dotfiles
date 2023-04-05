@@ -3,7 +3,7 @@
 ```sh
 brew install neovim
 brew install ripgrep # is required for grep searching with Telescope (OPTIONAL).
-git clone git@github.com:senelway/.nvim.git ~/.config/nvim --depth 1 && nvim
+git clone git@github.com:senelway/.config.git ~/.config --depth 1 && nvim
 ```
 
 ## Uninstall
