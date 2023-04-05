@@ -63,22 +63,17 @@ M.telescope = {
   },
 }
 
+local toggleTerm = function()
+  require("nvterm.terminal").toggle "float"
+end
 M.nvterm = {
   t = {
-    ["<C-i>"] = {
-      function()
-        require("nvterm.terminal").toggle "float"
-      end,
-      "toggle floating term",
-    },
+    ["<C-t>"] = { toggleTerm, "toggle floating term" },
+    ["<Esc>"] = { toggleTerm, "toggle floating term" },
   },
   n = {
-    ["<leader>i"] = {
-      function()
-        require("nvterm.terminal").toggle "float"
-      end,
-      "toggle floating term",
-    },
+    ["<leader>t"] = { toggleTerm, "toggle floating term" },
+    ["<leader>i"] = { toggleTerm, "toggle floating term" },
   },
 }
 

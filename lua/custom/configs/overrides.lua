@@ -4,13 +4,19 @@ M.treesitter = {
   ensure_installed = {
     "vim",
     "lua",
+
     "html",
     "css",
-    "javascript",
+    "scss",
+
+    -- "javascript",
     "typescript",
     "c",
+
     "tsx",
-    "scss",
+    "vue",
+
+    "go",
     -- "markdown",
   },
   indent = {
@@ -24,17 +30,12 @@ M.treesitter = {
 M.telescope = {
   defaults = {
     file_ignore_patterns = {
-      "public/*",
-      "node_modules/*",
-      "build/*",
-      "dist/*",
       ".yarn/*",
-      ".git/*",
+      ".pnpm-lock.*",
       ".idea/*",
     },
     prompt_prefix = " ",
   },
-  extensions = {},
 }
 
 M.mason = {
