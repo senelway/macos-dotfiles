@@ -3,7 +3,7 @@
 ```sh
 brew install neovim
 brew install ripgrep # is required for grep searching with Telescope (OPTIONAL).
-git clone git@github.com:recats/neovim-nvchad.git ~/.config/nvim --depth 1 && nvim
+git clone git@github.com:senelway/.nvim.git ~/.config/nvim --depth 1 && nvim
 ```
 
 ## Uninstall
@@ -183,4 +183,5 @@ key_bindings:
 ## Fonts
 
 [Fira-Code-Nerd-font.zip](https://github.com/recats/neovim-nvchad/files/11148957/fira-code.zip)
+
 [JeBrainsMono-Nerd-font.zip](https://github.com/recats/neovim-nvchad/files/11135856/JeBrainsMono-Nord-font.zip)
