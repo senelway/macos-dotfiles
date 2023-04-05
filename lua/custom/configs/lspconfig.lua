@@ -10,10 +10,15 @@ local servers = {
   "cssls",
   "tsserver",
   "volar",
+
   "tailwindcss",
+  -- "unocss",
 
   -- golang
   "gopls",
+
+  -- rust
+  -- "rust_analyzer",
 
   -- NOTE: c#
   -- "csharp",
