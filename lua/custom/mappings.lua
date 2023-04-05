@@ -65,7 +65,7 @@ M.telescope = {
 
 M.nvterm = {
   t = {
-    ["<leader>i"] = {
+    ["<C-i>"] = {
       function()
         require("nvterm.terminal").toggle "float"
       end,
