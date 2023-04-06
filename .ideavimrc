@@ -1,0 +1,84 @@
+"" Source your .vimrc
+"source ~/.vimrc
+set ideajoin
+Plug 'easymotion/vim-easymotion'
+
+set scrolloff=5
+let mapleader=" "
+
+" Do incremental searching.
+set incsearch
+set multiple-cursors
+set surround
+set commentary
+set clipboard+=unnamed
+set relativenumber number
+set NERDTree
+set autoindent
+
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeJumpParent='h'
+
+map Q g
+
+" yank/paste to/from system clipboard
+map <leader>y "*y
+map <leader>p "*p
+
+" window manager
+nnoremap <TAB> :action NextTab<CR>
+nnoremap <s-TAB> :action PreviousTab<CR>
+nnoremap <C-k> :action NextTabWindow <CR>
+nnoremap <C-k> :action NextWindowTab <CR>
+nnoremap <C-k> :action NextProjectTab <CR>
+
+nnoremap <S-\> :action SplitVertically<CR>
+nnoremap <S-]> :action SplitHorizontally<CR>
+nnoremap <S-=> :action Unsplit<CR>
+" window manager
+
+nnoremap <S-Left> :action EditorLeftWithSelection<CR>
+nnoremap <S-Right> :action EditorRightWithSelection<CR>
+nnoremap <S-Up> :action EditorUpWithSelection<CR>
+nnoremap <S-Down> :action EditorDownWithSelection<CR>
+
+nnoremap <leader>ra :action RenameElement<CR>
+nnoremap <leader>ff :action SearchEverywhere<CR>
+nnoremap <leader>fw :action FindInPath<CR>
+nnoremap <leader>fm :action ReformatCode<CR>
+nnoremap <leader>rt :action Refactorings.QuickListPopupAction<CR>
+nnoremap <leader>gb :action RecentLocations<CR>
+nnoremap <leader>qi :action ShowIntentionActions<CR>
+
+
+" move cursor in editor mode
+imap <C-h> :action EditorLeft <CR>
+imap <C-l> :action EditorRight <CR>
+imap <C-j> :action EditorUp <CR>
+imap <C-k> :action EditorDown <CR>
+" move cursor in editor mode
+
+nnoremap <leader>/ :action CommentByLineComment <CR>
+nnoremap <leader>e :NERDTree<CR>
+nnoremap <leader>i :action ActivateTerminalToolWindow<cr>
+
+nnoremap gr :action ShowUsages<CR>
+nnoremap ge :action ShowErrorDescription<CR>
+nnoremap gh :action QuickJavaDoc<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap ]d :action GotoNextError<CR>
+nnoremap [d :action GotoPreviousError<CR>
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+
+nnoremap ; :
+nnoremap qq :x <CR>
+set timeoutlen=500
+
+imap jj <esc>
+set timeoutlen=500
+imap kk <esc>
+set timeoutlen=500
+imap jk <Esc>
+set timeoutlen=500
