@@ -1,9 +1,12 @@
-*
 !nvim
+!recats-helper
 !kitty
 !alacritty
 !.gitignore
 !.gitmodules
 !README.md
 !.stylua.toml
+!.recats-helper/rh
+!.recats-helper/README.md
 
+*
