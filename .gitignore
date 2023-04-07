@@ -1,4 +1,3 @@
-*
 !nvim
 !kitty
 !alacritty
@@ -6,4 +5,7 @@
 !.gitmodules
 !README.md
 !.stylua.toml
+!.recats-helper/rh
+!.recats-helper/README.md
 
+*
