@@ -60,6 +60,7 @@ M.tabufline = {
 M.telescope = {
   n = {
     ["<leader>gbb"] = { "<cmd> Telescope git_branches <CR>", "git branches" },
+    ["<leader>fs"] = { "<cmd> Telescope grep_string <CR>", "grep with word under cursor" },
   },
 }
 
