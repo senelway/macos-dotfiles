@@ -46,7 +46,10 @@ null_ls.setup {
       vim.api.nvim_create_autocmd("BufWritePre", {
         group = augroup,
         buffer = bufnr,
-        callback = vim.lsp.buf.formatting,
+        callback = function()
+          -- NOTE: check how it will work
+          vim.lsp.buf.format { async = true }
+        end,
       })
     end
     vim.api.nvim_create_autocmd("VimLeavePre", {

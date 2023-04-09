@@ -37,10 +37,10 @@ M.general = {
     -- http://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/
     -- empty mode is same as using <cmd> :map
     -- also don't use g[j|k] when in operator pending mode, so it doesn't alter d, y or c behaviour
-    ["j"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', opts = { expr = true } },
-    ["k"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', opts = { expr = true } },
-    ["<Up>"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', opts = { expr = true } },
-    ["<Down>"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', opts = { expr = true } },
+    ["j"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "move down", opts = { expr = true } },
+    ["k"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', "move up", opts = { expr = true } },
+    ["<Up>"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', "move up", opts = { expr = true } },
+    ["<Down>"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "move down", opts = { expr = true } },
 
     -- new buffer
     ["<leader>b"] = { "<cmd> enew <CR>", "new buffer" },
@@ -57,8 +57,8 @@ M.general = {
   },
 
   x = {
-    ["j"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "move left", opts = { expr = true } },
-    ["k"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', "move down", opts = { expr = true } },
+    ["j"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "move down", opts = { expr = true } },
+    ["k"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', "move up", opts = { expr = true } },
     -- Don't copy the replaced text after pasting in visual mode
     -- https://vim.fandom.com/wiki/Replace_a_word_with_yanked_text#Alternative_mapping_for_paste
     ["p"] = { 'p:let @+=@0<CR>:let @"=@0<CR>', "dont copy replaced text", opts = { silent = true } },
@@ -70,14 +70,14 @@ M.tabufline = {
 
   n = {
     -- cycle through buffers
-    ["<TAB>"] = {
+    ["<tab>"] = {
       function()
         require("nvchad_ui.tabufline").tabuflineNext()
       end,
       "goto next buffer",
     },
 
-    ["<S-Tab>"] = {
+    ["<S-tab>"] = {
       function()
         require("nvchad_ui.tabufline").tabuflinePrev()
       end,
@@ -262,10 +262,10 @@ M.telescope = {
     ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "find files" },
     ["<leader>fa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "find all" },
     ["<leader>fw"] = { "<cmd> Telescope live_grep <CR>", "live grep" },
-    ["<leader>fs"] = { "<cmd> Telescope grep_string <CR>", "grep with word under cursor" },
     ["<leader>fb"] = { "<cmd> Telescope buffers <CR>", "find buffers" },
     ["<leader>fh"] = { "<cmd> Telescope help_tags <CR>", "help page" },
     ["<leader>fo"] = { "<cmd> Telescope oldfiles <CR>", "find oldfiles" },
+    ["<leader>fz"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "find in current buffer" },
 
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "git commits" },
@@ -329,6 +329,7 @@ M.nvterm = {
       "toggle vertical term",
     },
 
+    -- new
     ["<leader>h"] = {
       function()
         require("nvterm.terminal").new "horizontal"
