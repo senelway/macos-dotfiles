@@ -2,12 +2,12 @@
   "rsf": {
     "prefix": "rsf",
     "body": [
-      "type IProps = {}",
-      "export default const ${1:${TM_FILENAME_BASE}}:React.FC<IProps> = ({}) {",
+      "const ${1:${TM_FILENAME_BASE}} = ({}) => {",
       "  return (",
       "    <div>${1:first}</div>",
       "  )",
-      "}"
+      "}",
+      "export default ${1:first}"
     ],
     "description": "Create function component with typescript"
   }
