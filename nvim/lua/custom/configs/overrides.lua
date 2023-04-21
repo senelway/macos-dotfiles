@@ -36,6 +36,7 @@ M.telescope = {
     },
     prompt_prefix = " ",
   },
+  extensions_list = { "harpoon" },
 }
 
 M.mason = {

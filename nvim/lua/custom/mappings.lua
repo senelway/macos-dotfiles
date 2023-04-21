@@ -10,6 +10,12 @@ M.general = {
 
     -- custome methods
     ["<leader>go"] = { "<cmd> GithubOpen <cr>", "github open" },
+    ["<leader>a"] = {
+      function()
+        require("harpoon.mark").add_file()
+      end,
+      "add file to harpoon",
+    },
   },
   i = {
     ["jj"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
@@ -61,6 +67,7 @@ M.telescope = {
   n = {
     ["<leader>gbb"] = { "<cmd> Telescope git_branches <CR>", "git branches" },
     ["<leader>fs"] = { "<cmd> Telescope grep_string <CR>", "grep with word under cursor" },
+    ["<leader>fh"] = { "<cmd> Telescope harpoon marks <CR>", "find harpoon marks" },
   },
 }
 
