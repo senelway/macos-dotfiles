@@ -22,6 +22,13 @@ local plugins = {
   },
 
   {
+    "ThePrimeagen/harpoon",
+    init = function()
+      require("harpoon").setup {}
+    end,
+  },
+
+  {
     "MunifTanjim/nui.nvim",
     module = { "nui.layout", "nui.popup" },
     module_pattern = { "nui.*" },
