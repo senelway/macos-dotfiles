@@ -11,7 +11,7 @@ local sources = {
   b.formatting.prettier.with {
     -- TODO: migrate to ROME
     bin = "prettierd",
-    filetypes = { "html", "markdown", "css", "ts", "tsx", "vue", "pcss", "scss" },
+    filetypes = { "html", "markdown", "css", "ts", "tsx", "vue", "pcss", "scss", "pcss" },
     cli_options = {
       config_precedence = "prefer-file",
     },

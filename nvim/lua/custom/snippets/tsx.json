@@ -2,7 +2,7 @@
   "rsf": {
     "prefix": "rsf",
     "body": [
-      "const ${1:${TM_FILENAME_BASE}} = ({}) => {",
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
       "  return (",
       "    <div>${1:first}</div>",
       "  )",

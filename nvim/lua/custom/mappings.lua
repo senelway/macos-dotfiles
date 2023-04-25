@@ -16,6 +16,12 @@ M.general = {
       end,
       "add file to harpoon",
     },
+    ["<leader>fh"] = {
+      function()
+        require("harpoon.ui").toggle_quick_menu()
+      end,
+      "harpoon quick menu",
+    },
   },
   i = {
     ["jj"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
@@ -67,7 +73,6 @@ M.telescope = {
   n = {
     ["<leader>gbb"] = { "<cmd> Telescope git_branches <CR>", "git branches" },
     ["<leader>fs"] = { "<cmd> Telescope grep_string <CR>", "grep with word under cursor" },
-    ["<leader>fh"] = { "<cmd> Telescope harpoon marks <CR>", "find harpoon marks" },
   },
 }
 
