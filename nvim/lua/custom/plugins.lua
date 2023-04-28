@@ -5,14 +5,6 @@ local plugins = {
   -- Override plugin definition options
   --
   {
-    "simrat39/symbols-outline.nvim",
-    cmd = "SymbolsOutline",
-    config = function()
-      require("symbols-outline").setup {}
-    end,
-  },
-
-  {
     "folke/todo-comments.nvim",
     cmd = { "TodoTelescope" },
     requires = "nvim-lua/plenary.nvim",

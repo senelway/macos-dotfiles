@@ -7,7 +7,6 @@ M.general = {
     ["|"] = { "<cmd> vsplit <cr>" },
     ["="] = { "<cmd> close <cr>" },
     ["<leader>we"] = { "<cmd> set spell <cr>", "spell check" },
-
     -- custome methods
     ["<leader>go"] = { "<cmd> GithubOpen <cr>", "github open" },
     ["<leader>a"] = {
@@ -66,6 +65,7 @@ M.tabufline = {
       end,
       "close buffer",
     },
+    ["qc"] = { "<cmd> close <cr>", "close" },
   },
 }
 
