@@ -13,6 +13,7 @@ M.ui = {
     theme = "vscode_colored",
   },
   tabufline = {
+    enabled = false,
     show_numbers = true,
   },
   nvdash = {

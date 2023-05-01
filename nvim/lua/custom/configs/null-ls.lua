@@ -29,7 +29,7 @@ local sources = {
   b.formatting.goimports,
 
   -- rust
-  -- b.formatting.rustfmt,
+  b.formatting.rustfmt,
 
   -- NOTE: c#
   -- b.formatting.csharpier
