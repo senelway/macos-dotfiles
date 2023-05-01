@@ -17,6 +17,7 @@ M.treesitter = {
     "vue",
 
     "go",
+    "rust",
     -- "markdown",
   },
   indent = {
@@ -59,8 +60,8 @@ M.mason = {
     -- "unocss-language-server",
 
     -- rust
-    -- "rust-analyzer",
-    -- "rustfmt"
+    "rust-analyzer",
+    "rustfmt",
 
     -- go lang
     "gopls",
