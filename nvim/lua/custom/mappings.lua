@@ -4,10 +4,10 @@ local M = {}
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
-    ["|"] = { "<cmd> vsplit <cr>" },
+    ["\\"] = { "<cmd> vsplit <cr>", "split horizontal" },
+    ["|"] = { "<cmd> split <cr>", "split vertical" },
     ["="] = { "<cmd> close <cr>" },
     ["<leader>we"] = { "<cmd> set spell <cr>", "spell check" },
-    -- custome methods
     ["<leader>go"] = { "<cmd> GithubOpen <cr>", "github open" },
     ["<leader>a"] = {
       function()
@@ -90,4 +90,14 @@ M.nvterm = {
   },
 }
 
+M.lspconfig = {
+  n = {
+    ["gd"] = {
+      function()
+        vim.lsp.buf.definition { on_list = require("custom.utils.helpers").definition_on_list }
+      end,
+      "lsp definition",
+    },
+  },
+}
 return M
