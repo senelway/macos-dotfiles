@@ -70,7 +70,7 @@ local plugins = {
         suggestion = {
           auto_trigger = true,
           keymap = {
-            accept = "<C-v>",
+            accept = "<C-p>",
           },
         },
       }
@@ -104,7 +104,6 @@ local plugins = {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
   },
-
   {
     "nvim-tree/nvim-tree.lua",
     opts = overrides.nvimtree,
@@ -118,12 +117,6 @@ local plugins = {
       require("better_escape").setup()
     end,
   },
-
-  -- To make a plugin not be loaded
-  -- {
-  --   "NvChad/nvim-colorizer.lua",
-  --   enabled = false
-  -- },
 }
 
 return plugins
