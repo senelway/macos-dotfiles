@@ -11,4 +11,5 @@ require("custom.utils.browser").load()
 
 vim.opt.relativenumber = true
 vim.opt.title = true
+vim.opt.swapfile = false
 vim.g.vscode_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/snippets"

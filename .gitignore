@@ -4,6 +4,8 @@
 !.gitignore
 !.gitmodules
 !README.md
+!skhd
+!yabai
 !.stylua.toml
 !.recats-helper/rh
 !.recats-helper/README.md
