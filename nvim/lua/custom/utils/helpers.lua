@@ -16,7 +16,7 @@ local function filter(arr, fn)
 end
 
 local function filterReactDTS(value)
-  return string.match(value.filename, "node_modules/@types/react/ts*") == nil
+  return string.match(value.filename, "node_modules/@types/react/index.d.ts") == nil
 end
 
 M.definition_on_list = function(options)

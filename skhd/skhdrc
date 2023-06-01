@@ -5,7 +5,6 @@ alt - h : yabai -m window --focus west
 alt - l : yabai -m window --focus east
 alt - r : yabai -m window --focus recent
 
-
 # rotate layout clockwise
 shift + alt - t : yabai -m space --rotate 270
 # flip along y-axis
@@ -37,3 +36,4 @@ shift + cmd - h : yabai -m window --resize left:-60:0
 shift + cmd - l : yabai -m window --resize left:60:0
 shift + cmd - j : yabai -m window --resize top:0:-40
 shift + cmd - k : yabai -m window --resize top:0:40
+
