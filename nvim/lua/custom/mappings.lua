@@ -32,6 +32,12 @@ M.general = {
   },
 }
 
+M.RestNvim = {
+  n = {
+    ["<leader>tr"] = { "<cmd> RestNvim <cr>", "http request" },
+  },
+}
+
 M.TodoTelescope = {
   n = {
     ["<leader>ft"] = { "<cmd> TodoTelescope <cr>", "find todos, notes, etc." },
@@ -85,7 +91,6 @@ M.nvterm = {
     ["<Esc>"] = { toggleTerm, "toggle floating term" },
   },
   n = {
-    ["<leader>t"] = { toggleTerm, "toggle floating term" },
     ["<leader>i"] = { toggleTerm, "toggle floating term" },
   },
 }
