@@ -45,18 +45,6 @@ M.dadbod = {
   },
 }
 
--- M.TodoTelescope = {
---   n = {
---     ["<leader>ft"] = { "<cmd> TodoTelescope <cr>", "find todos, notes, etc." },
---   },
--- }
-
--- M.ChatGPT = {
---   n = {
---     ["<leader>gg"] = { "<cmd> ChatGPT <cr>", "open chat gpt" },
---   },
--- }
---
 M.Trouble = {
   plugin = true,
   n = {
