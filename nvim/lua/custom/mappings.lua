@@ -33,24 +33,32 @@ M.general = {
 }
 
 M.RestNvim = {
+  plugin = true,
   n = {
     ["<leader>tr"] = { "<cmd> RestNvim <cr>", "http request" },
   },
 }
 
-M.TodoTelescope = {
+M.dadbod = {
   n = {
-    ["<leader>ft"] = { "<cmd> TodoTelescope <cr>", "find todos, notes, etc." },
+    ["<leader>fe"] = { "<cmd> DBUIToggle <cr>", "toggle database ui" },
   },
 }
 
-M.ChatGPT = {
-  n = {
-    ["<leader>gg"] = { "<cmd> ChatGPT <cr>", "open chat gpt" },
-  },
-}
+-- M.TodoTelescope = {
+--   n = {
+--     ["<leader>ft"] = { "<cmd> TodoTelescope <cr>", "find todos, notes, etc." },
+--   },
+-- }
 
+-- M.ChatGPT = {
+--   n = {
+--     ["<leader>gg"] = { "<cmd> ChatGPT <cr>", "open chat gpt" },
+--   },
+-- }
+--
 M.Trouble = {
+  plugin = true,
   n = {
     ["<leader>fe"] = { "<cmd> Trouble <cr>", "find errors file" },
     ["<leader>fE"] = { "<cmd> Trouble workspace_diagnostics <cr>", "find errors in workspace" },
@@ -58,12 +66,14 @@ M.Trouble = {
 }
 
 M.SymbolsOutline = {
+  plugin = true,
   n = {
     ["<leader>so"] = { "<cmd> SymbolsOutline <cr>", "symbols outline" },
   },
 }
 
 M.tabufline = {
+  plugin = true,
   n = {
     ["qq"] = {
       function()
@@ -76,6 +86,7 @@ M.tabufline = {
 }
 
 M.telescope = {
+  plugin = true,
   n = {
     ["<leader>gbb"] = { "<cmd> Telescope git_branches <CR>", "git branches" },
     ["<leader>fs"] = { "<cmd> Telescope grep_string <CR>", "grep with word under cursor" },
@@ -86,6 +97,7 @@ local toggleTerm = function()
   require("nvterm.terminal").toggle "float"
 end
 M.nvterm = {
+  plugin = true,
   t = {
     ["<C-t>"] = { toggleTerm, "toggle floating term" },
     ["<Esc>"] = { toggleTerm, "toggle floating term" },
@@ -96,6 +108,7 @@ M.nvterm = {
 }
 
 M.lspconfig = {
+  plugin = true,
   n = {
     ["gd"] = {
       function()

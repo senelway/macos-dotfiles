@@ -5,17 +5,24 @@ local plugins = {
   -- Override plugin definition options
   --
   {
-    "folke/todo-comments.nvim",
-    cmd = { "TodoTelescope" },
-    requires = "nvim-lua/plenary.nvim",
+    "tpope/vim-dadbod",
+    cmd = { "DB", "DBUIAddConnection", "DBUI", "DBUIToggle" },
+    dependencies = {
+      {
+        "kristijanhusak/vim-dadbod-ui",
+      },
+      {
+        "kristijanhusak/vim-dadbod-completion",
+      },
+    },
     config = function()
-      require("todo-comments").setup {}
+      require("custom.configs.dadbod").setup {}
     end,
   },
   {
     "rest-nvim/rest.nvim",
     ft = "http",
-    requires = "nvim-lua/plenary.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
     config = function()
       require("rest-nvim").setup {
         env_file = ".env",
@@ -36,34 +43,14 @@ local plugins = {
 
   {
     "ThePrimeagen/harpoon",
-    init = function()
+    config = function()
       require("harpoon").setup {}
     end,
   },
 
   {
-    "MunifTanjim/nui.nvim",
-    module = { "nui.layout", "nui.popup" },
-    module_pattern = { "nui.*" },
-  },
-  {
-    "jackMort/ChatGPT.nvim",
-    cmd = "ChatGPT",
-    opt = true,
-    module_pattern = { "chatgpt*" },
-    config = function()
-      require("chatgpt").setup {}
-    end,
-    requires = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-  },
-
-  {
     "folke/trouble.nvim",
-    requires = "nvim-tree/nvim-web-devicons",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       require("trouble").setup {}
     end,
