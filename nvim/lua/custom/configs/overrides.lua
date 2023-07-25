@@ -87,6 +87,9 @@ M.nvimtree = {
         git = true,
       },
       glyphs = {
+        folder = {
+          default = "",
+        },
         git = {
           unstaged = "*",
           untracked = "",
