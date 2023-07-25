@@ -27,11 +27,6 @@ M.treesitter = {
 
 M.telescope = {
   defaults = {
-    file_ignore_patterns = {
-      ".yarn/cache/*",
-      ".pnpm-lock.*",
-      ".idea/*",
-    },
     prompt_prefix = " ",
   },
   extensions_list = { "harpoon" },
