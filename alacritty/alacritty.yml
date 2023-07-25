@@ -32,6 +32,6 @@ key_bindings:
   - { key: V,        mods: Command,   action: Paste               }
   - { key: C,        mods: Command,   action: Copy                }
   - { key: Return,   mods: Command,   action: ToggleFullscreen    }
-  # https://stackoverflow.com/questions/16359878/how-to-map-shift-enter/42461580#42461580
+  #https://stackoverflow.com/questions/16359878/how-to-map-shift-enter/42461580#42461580
   - { key: Return,   mods: Shift,     chars: "\x1b[13;2u"         }
   - { key: Return,   mods: Control,   chars: "\x1b[13;5u"         }

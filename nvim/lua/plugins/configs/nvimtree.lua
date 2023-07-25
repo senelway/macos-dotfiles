@@ -31,12 +31,14 @@ local options = {
     },
   },
   renderer = {
-    root_folder_label = true,
+    root_folder_label = false,
     highlight_git = false,
     highlight_opened_files = "none",
+
     indent_markers = {
       enable = false,
     },
+
     icons = {
       show = {
         file = true,
@@ -44,16 +46,17 @@ local options = {
         folder_arrow = true,
         git = false,
       },
+
       glyphs = {
-        default = "",
+        default = "󰈚",
         symlink = "",
         folder = {
-          default = "",
-          empty = "",
-          empty_open = "",
+          default = "",
+          empty = "",
+          empty_open = "",
           open = "",
-          symlink = "",
-          symlink_open = "",
+          symlink = "",
+          symlink_open = "",
           arrow_open = "",
           arrow_closed = "",
         },

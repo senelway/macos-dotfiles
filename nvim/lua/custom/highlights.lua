@@ -9,6 +9,9 @@ M.override = {
   CursorLine = {
     bg = "darker_black",
   },
+  Bold = {
+    italic = true,
+  },
   Comment = {
     italic = true,
   },

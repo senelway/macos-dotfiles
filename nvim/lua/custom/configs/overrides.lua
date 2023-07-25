@@ -18,7 +18,9 @@ M.treesitter = {
 
     "go",
     "rust",
-    -- "markdown",
+
+    "sql",
+    "markdown",
   },
   indent = {
     enable = true,
@@ -27,11 +29,6 @@ M.treesitter = {
 
 M.telescope = {
   defaults = {
-    file_ignore_patterns = {
-      ".yarn/*",
-      ".pnpm-lock.*",
-      ".idea/*",
-    },
     prompt_prefix = " ",
   },
   extensions_list = { "harpoon" },
@@ -92,9 +89,8 @@ M.nvimtree = {
         git = true,
       },
       glyphs = {
-        git = {
-          unstaged = "*",
-          untracked = "",
+        folder = {
+          default = "",
         },
       },
     },
