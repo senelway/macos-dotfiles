@@ -18,7 +18,9 @@ M.treesitter = {
 
     "go",
     "rust",
-    -- "markdown",
+
+    "sql",
+    "markdown",
   },
   indent = {
     enable = true,
@@ -89,10 +91,6 @@ M.nvimtree = {
       glyphs = {
         folder = {
           default = "",
-        },
-        git = {
-          unstaged = "*",
-          untracked = "",
         },
       },
     },
