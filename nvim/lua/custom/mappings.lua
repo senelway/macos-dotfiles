@@ -90,17 +90,27 @@ M.telescope = {
   },
 }
 
-local toggleTerm = function()
-  require("nvterm.terminal").toggle "float"
-end
 M.nvterm = {
   plugin = true,
   t = {
-    ["<C-t>"] = { toggleTerm, "toggle floating term" },
-    ["<Esc>"] = { toggleTerm, "toggle floating term" },
+    ["<Esc>"] = {
+      function()
+        local bufnr = vim.api.nvim_get_current_buf()
+        local fileType = vim.api.nvim_buf_get_option(bufnr, "filetype")
+        if fileType == "terminal" then
+          require("nvterm.terminal").toggle "float"
+        end
+      end,
+      "Terminal: toggle floating",
+    },
   },
   n = {
-    ["<leader>i"] = { toggleTerm, "toggle floating term" },
+    ["<leader>i"] = {
+      function()
+        require("nvterm.terminal").toggle "float"
+      end,
+      "Termina: toogle floaing",
+    },
   },
 }
 
