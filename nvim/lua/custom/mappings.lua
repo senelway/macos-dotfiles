@@ -70,8 +70,7 @@ M.tabufline = {
   n = {
     ["qq"] = {
       function()
-        if require("custom.utils.helpers").isCurrentBufferOption "TelescopePrompt" then
-        else
+        if require("custom.utils.helpers").isCurrentBufferOption "TelescopePrompt" ~= true then
           require("nvchad_ui.tabufline").close_buffer()
         end
       end,
