@@ -65,7 +65,11 @@ M.tabufline = {
   n = {
     ["qq"] = {
       function()
-        require("nvchad_ui.tabufline").close_buffer()
+        local bufnr = vim.api.nvim_get_current_buf()
+        local fileType = vim.api.nvim_buf_get_option(bufnr, "filetype")
+        if fileType ~= "TelescopePrompt" then
+          require("nvchad_ui.tabufline").close_buffer()
+        end
       end,
       "close buffer",
     },
