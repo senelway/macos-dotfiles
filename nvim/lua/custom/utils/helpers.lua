@@ -29,4 +29,10 @@ M.definition_on_list = function(options)
   vim.api.nvim_command "cfirst" -- or maybe you want 'copen' instead of 'cfirst'
 end
 
+M.isCurrentBufferOption = function(value)
+  local bufnr = vim.api.nvim_get_current_buf()
+  local fileType = vim.api.nvim_buf_get_option(bufnr, "filetype")
+  return fileType == value
+end
+
 return M

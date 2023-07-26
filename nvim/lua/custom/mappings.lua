@@ -70,9 +70,7 @@ M.tabufline = {
   n = {
     ["qq"] = {
       function()
-        local bufnr = vim.api.nvim_get_current_buf()
-        local fileType = vim.api.nvim_buf_get_option(bufnr, "filetype")
-        if fileType ~= "TelescopePrompt" then
+        if require("custom.utils.helpers").isCurrentBufferOption "TelescopePrompt" == false then
           require("nvchad_ui.tabufline").close_buffer()
         end
       end,
@@ -90,17 +88,25 @@ M.telescope = {
   },
 }
 
-local toggleTerm = function()
-  require("nvterm.terminal").toggle "float"
-end
 M.nvterm = {
   plugin = true,
   t = {
-    ["<C-t>"] = { toggleTerm, "toggle floating term" },
-    ["<Esc>"] = { toggleTerm, "toggle floating term" },
+    ["<Esc>"] = {
+      function()
+        if require("custom.utils.helpers").isCurrentBufferOption "terminal" then
+          require("nvterm.terminal").toggle "float"
+        end
+      end,
+      "Terminal: toggle floating",
+    },
   },
   n = {
-    ["<leader>i"] = { toggleTerm, "toggle floating term" },
+    ["<leader>i"] = {
+      function()
+        require("nvterm.terminal").toggle "float"
+      end,
+      "Termina: toogle floaing",
+    },
   },
 }
 
