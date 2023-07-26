@@ -4,6 +4,12 @@ local overrides = require "custom.configs.overrides"
 local plugins = {
   -- Override plugin definition options
   --
+
+  {
+    "kdheepak/lazygit.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
+    cmd = { "LazyGit" },
+  },
   {
     "tpope/vim-dadbod",
     cmd = { "DB", "DBUIAddConnection", "DBUI", "DBUIToggle" },

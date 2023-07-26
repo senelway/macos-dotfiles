@@ -32,6 +32,11 @@ M.general = {
   },
 }
 
+M.lazygit = {
+  n = {
+    ["<leader>gl"] = { "<cmd> LazyGit <cr>", "Open LazyGit" },
+  },
+}
 M.RestNvim = {
   plugin = true,
   n = {
