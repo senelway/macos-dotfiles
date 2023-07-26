@@ -91,7 +91,7 @@ M.telescope = {
 M.nvterm = {
   plugin = true,
   t = {
-    ["<Esc>"] = {
+    ["<leader><Esc>"] = {
       function()
         if require("custom.utils.helpers").isCurrentBufferOption "terminal" then
           require("nvterm.terminal").toggle "float"
