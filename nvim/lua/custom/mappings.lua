@@ -70,9 +70,8 @@ M.tabufline = {
   n = {
     ["qq"] = {
       function()
-        local bufnr = vim.api.nvim_get_current_buf()
-        local fileType = vim.api.nvim_buf_get_option(bufnr, "filetype")
-        if fileType ~= "TelescopePrompt" then
+        if require("custom.utils.helpers").isCurrentBufferOption "TelescopePrompt" then
+        else
           require("nvchad_ui.tabufline").close_buffer()
         end
       end,
@@ -95,9 +94,7 @@ M.nvterm = {
   t = {
     ["<Esc>"] = {
       function()
-        local bufnr = vim.api.nvim_get_current_buf()
-        local fileType = vim.api.nvim_buf_get_option(bufnr, "filetype")
-        if fileType == "terminal" then
+        if require("custom.utils.helpers").isCurrentBufferOption "terminal" then
           require("nvterm.terminal").toggle "float"
         end
       end,
