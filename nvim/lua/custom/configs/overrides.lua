@@ -28,10 +28,7 @@ M.treesitter = {
 }
 
 M.telescope = {
-  defaults = {
-    prompt_prefix = " ",
-  },
-  extensions_list = { "harpoon" },
+  extensions_list = { "harpoon", "themes", "terms" },
 }
 
 M.mason = {
