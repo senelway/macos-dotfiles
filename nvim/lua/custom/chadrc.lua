@@ -6,7 +6,6 @@ local highlights = require "custom.highlights"
 
 M.ui = {
   theme = "catppuccin",
-  -- TODO: fix it
   theme_toggle = { "catppuccin", "monochrome" },
   hl_override = highlights.override,
   hl_add = highlights.add,

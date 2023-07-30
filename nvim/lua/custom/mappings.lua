@@ -8,27 +8,36 @@ M.general = {
     ["|"] = { "<cmd> split <cr>", "split vertical" },
     ["="] = { "<cmd> close <cr>" },
     ["<leader>we"] = { "<cmd> set spell <cr>", "spell check" },
-    ["<leader>go"] = { "<cmd> GithubOpen <cr>", "github open" },
+  },
+  i = {
+    ["jj"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
+    ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
+  },
+}
+
+M.recats = {
+  n = {
+    ["<leader>go"] = { "<cmd> GithubOpen <cr>", "Github open" },
+  },
+  v = {
+    ["<C-o>"] = { "<cmd> LinkOpen <cr>", "Browser open" },
+  },
+}
+
+M.harpoon = {
+  n = {
     ["<leader>a"] = {
       function()
         require("harpoon.mark").add_file()
       end,
-      "add file to harpoon",
+      "Add file to harpoon",
     },
     ["<leader>fh"] = {
       function()
         require("harpoon.ui").toggle_quick_menu()
       end,
-      "harpoon quick menu",
+      "Harpoon quick menu",
     },
-  },
-  i = {
-    ["jj"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
-    ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
-    ["kk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
-  },
-  v = {
-    ["<C-o>"] = { "<cmd> LinkOpen <cr>", "browser open" },
   },
 }
 
@@ -38,30 +47,21 @@ M.lazygit = {
   },
 }
 M.RestNvim = {
-  plugin = true,
   n = {
-    ["<leader>tr"] = { "<cmd> RestNvim <cr>", "http request" },
+    ["<leader>tr"] = { "<Plug>RestNvim", "HTTP request" },
   },
 }
 
 M.dadbod = {
   n = {
-    ["<leader>fe"] = { "<cmd> DBUIToggle <cr>", "toggle database ui" },
+    ["<leader>od"] = { "<cmd> DBUIToggle <cr>", "Toggle database ui" },
   },
 }
 
 M.Trouble = {
-  plugin = true,
   n = {
-    ["<leader>fe"] = { "<cmd> Trouble <cr>", "find errors file" },
-    ["<leader>fE"] = { "<cmd> Trouble workspace_diagnostics <cr>", "find errors in workspace" },
-  },
-}
-
-M.SymbolsOutline = {
-  plugin = true,
-  n = {
-    ["<leader>so"] = { "<cmd> SymbolsOutline <cr>", "symbols outline" },
+    ["<leader>fe"] = { "<cmd> Trouble <cr>", "Find errors in file" },
+    ["<leader>fE"] = { "<cmd> Trouble workspace_diagnostics <cr>", "Find errors in workspace" },
   },
 }
 
@@ -85,13 +85,14 @@ M.telescope = {
   n = {
     ["<leader>gbb"] = { "<cmd> Telescope git_branches <CR>", "git branches" },
     ["<leader>fs"] = { "<cmd> Telescope grep_string <CR>", "grep with word under cursor" },
+    ["<leader>fc"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
   },
 }
 
 M.nvterm = {
   plugin = true,
   t = {
-    ["<leader><Esc>"] = {
+    ["<Esc><Esc>"] = {
       function()
         if require("custom.utils.helpers").isCurrentBufferOption "terminal" then
           require("nvterm.terminal").toggle "float"
