@@ -86,6 +86,7 @@ M.telescope = {
     ["<leader>gbb"] = { "<cmd> Telescope git_branches <CR>", "git branches" },
     ["<leader>fs"] = { "<cmd> Telescope grep_string <CR>", "grep with word under cursor" },
     ["<leader>fc"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
+    ["<leader>fp"] = { "<cmd> Telescope projects <CR>", "Open projects list" },
   },
 }
 

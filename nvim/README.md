@@ -3,6 +3,10 @@
 ```sh
 brew install neovim
 brew install ripgrep # is required for grep searching with Telescope (OPTIONAL).
+
+git clone git@github.com:senelway/dotfiles.git ~/.config/_tmp
+cd ~/.config/_tmp
+mv nvim ../nvim
 ```
 
 ## Uninstall
@@ -21,7 +25,7 @@ cd ~/.config/nvim/lua/custom/
 # mappings.lua there is a custom hotkeys
 ```
 
-## Hotkeys
+## All Hotkeys
 
 ```sh
 ## <leader>ch
@@ -41,25 +45,8 @@ sudo nvim
 
 ## Plugins list
 
-- [Chat gpt](https://github.com/jackMort/ChatGPT.nvim)
-- [Symbols in right tree](https://github.com/simrat39/symbols-outline.nvim)
-- [Todos and etc](https://github.com/folke/todo-comments.nvim)
-- [Troubles](https://github.com/folke/trouble.nvim)
-- [Copilot](https://github.com/zbirenbaum/copilot.lua)
-
-## ChatGPT settings
-
-```sh
-# generate a token https://platform.openai.com/account/api-keys
-
-export OPENAI_API_KEY=""
-
-# ~/.zshrc
-# export OPENAI_API_KEY=""
-
-# hotkey is `<leader>gg`
-# ./lua/custom/mappings.lua
-```
+- [Custom](https://github.com/senelway/dotfiles/blob/main/nvim/lua/custom/plugins.lua)
+- [Base](https://github.com/senelway/dotfiles/blob/main/nvim/lua/plugins/init.lua)
 
 ## Spellcheck
 

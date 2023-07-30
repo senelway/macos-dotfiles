@@ -31,7 +31,7 @@ M.treesitter = {
 }
 
 M.telescope = {
-  extensions_list = { "harpoon", "themes", "terms" },
+  extensions_list = { "harpoon", "themes", "terms", "projects" },
 }
 
 M.mason = {
