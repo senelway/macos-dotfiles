@@ -35,3 +35,5 @@ key_bindings:
   #https://stackoverflow.com/questions/16359878/how-to-map-shift-enter/42461580#42461580
   - { key: Return,   mods: Shift,     chars: "\x1b[13;2u"         }
   - { key: Return,   mods: Control,   chars: "\x1b[13;5u"         }
+  - { key: J,        mods: Command,   action: ScrollPageUp        }
+  - { key: K,        mods: Command,   action: ScrollPageDown      }

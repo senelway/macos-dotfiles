@@ -26,19 +26,6 @@ local plugins = {
     end,
   },
   {
-    "rest-nvim/rest.nvim",
-    ft = "http",
-    dependencies = "nvim-lua/plenary.nvim",
-    config = function()
-      require("rest-nvim").setup {
-        env_file = ".env",
-        result = {
-          show_url = true,
-        },
-      }
-    end,
-  },
-  {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
@@ -57,9 +44,7 @@ local plugins = {
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-      require("trouble").setup {}
-    end,
+    cmd = "TroubleToggle",
   },
 
   {
@@ -82,7 +67,25 @@ local plugins = {
       }
     end,
   },
-
+  {
+    "rest-nvim/rest.nvim",
+    ft = "http",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("rest-nvim").setup {
+        env_file = ".env",
+        result = {
+          show_url = true,
+        },
+      }
+    end,
+  },
+  -------------------------------
+  -------------------------------
+  -------------------------------
+  -------------------------------
+  -------------------------------
+  -------------------------------
   {
     "neovim/nvim-lspconfig",
     dependencies = {
