@@ -8,6 +8,8 @@ M.general = {
     ["|"] = { "<cmd> split <cr>", "split vertical" },
     ["="] = { "<cmd> close <cr>" },
     ["<leader>we"] = { "<cmd> set spell <cr>", "spell check" },
+    ["<C-S-j>"] = { "<cmd> m .+1 <cr>", "Move line down" },
+    ["<C-S-k>"] = { "<cmd> m .-2 <cr>", "Move line down" },
   },
   i = {
     ["jj"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
