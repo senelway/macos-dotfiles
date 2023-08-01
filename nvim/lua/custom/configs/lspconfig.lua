@@ -18,7 +18,7 @@ local servers = {
   "gopls",
 
   -- rust
-  "rust_analyzer",
+  -- "rust_analyzer",
 
   -- NOTE: c#
   -- "csharp",

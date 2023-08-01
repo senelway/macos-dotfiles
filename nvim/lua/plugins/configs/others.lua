@@ -16,8 +16,8 @@ M.blankline = {
     "",
   },
   buftype_exclude = { "terminal" },
-  show_trailing_blankline_indent = false,
-  show_first_indent_level = false,
+  show_trailing_blankline_indent = true,
+  show_first_indent_level = true,
   show_current_context = true,
   show_current_context_start = true,
 }
@@ -39,10 +39,7 @@ M.luasnip = function(opts)
 
   vim.api.nvim_create_autocmd("InsertLeave", {
     callback = function()
-      if
-        require("luasnip").session.current_nodes[vim.api.nvim_get_current_buf()]
-        and not require("luasnip").session.jump_active
-      then
+      if require("luasnip").session.current_nodes[vim.api.nvim_get_current_buf()] and not require("luasnip").session.jump_active then
         require("luasnip").unlink_current()
       end
     end,

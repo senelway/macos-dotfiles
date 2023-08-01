@@ -4,16 +4,22 @@ local M = {}
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
-    ["\\"] = { "<cmd> vsplit <cr>", "split horizontal" },
-    ["|"] = { "<cmd> split <cr>", "split vertical" },
+    ["\\"] = { "<cmd> vsplit <cr>", "Split horizontal" },
+    ["|"] = { "<cmd> split <cr>", "Split vertical" },
     ["="] = { "<cmd> close <cr>" },
-    ["<leader>we"] = { "<cmd> set spell <cr>", "spell check" },
+
+    ["<leader>we"] = { "<cmd> set spell <cr>", "Enable spell checking" },
+    ["<leader>wE"] = { "<cmd> set spell! <cr>", "Disable spell checking" },
+    ["<C-\\>"] = { "<cmd> vertical resize +10 <cr>", "Resize vertical window" },
+
     ["<C-S-j>"] = { "<cmd> m .+1 <cr>", "Move line down" },
     ["<C-S-k>"] = { "<cmd> m .-2 <cr>", "Move line down" },
+
+    ["<leader>tt"] = { "<cmd> terminal <cr>", "Terminal open (classic mode)" },
   },
   i = {
-    ["jj"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
-    ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
+    ["jj"] = { "<ESC>", "Escape insert mode", opts = { nowait = true } },
+    ["jk"] = { "<ESC>", "Escape insert mode", opts = { nowait = true } },
   },
 }
 
@@ -85,10 +91,10 @@ M.tabufline = {
 M.telescope = {
   plugin = true,
   n = {
-    ["<leader>gbb"] = { "<cmd> Telescope git_branches <CR>", "git branches" },
-    ["<leader>fs"] = { "<cmd> Telescope grep_string <CR>", "grep with word under cursor" },
+    ["<leader>fs"] = { "<cmd> Telescope grep_string <CR>", "Find with string under cursor" },
     ["<leader>fc"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
-    ["<leader>fp"] = { "<cmd> Telescope projects <CR>", "Open projects list" },
+    ["<leader>fp"] = { "<cmd> Telescope projects <CR>", "Find projects list" },
+    ["<leader>fr"] = { "<cmd> Telescope lsp_references <CR>", "Find references" },
   },
 }
 

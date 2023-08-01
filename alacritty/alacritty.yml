@@ -27,8 +27,6 @@ window:
 tabspaces: 2
 
 colors:
-  primary:
-    background: "#20202A" # base
   cursor:
     text: "#1E1E2E" # base
     cursor: "#00ffcb" # rosewater

@@ -5,31 +5,11 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "aquarium",
-  theme_toggle = { "aquarium", "catppuccin" },
+  theme = "catppuccin",
   hl_override = highlights.override,
   hl_add = highlights.add,
   statusline = {
     theme = "vscode_colored",
-  },
-  tabufline = {
-    enabled = true,
-    show_numbers = true,
-  },
-  nvdash = {
-    load_on_startup = false,
-    header = {
-      "                                                                             ",
-    },
-    buttons = {
-      { "  Find File", "<leader> ff", "Telescope find_files" },
-      { "  Recent Files", "<leader> fo", "Telescope oldfiles" },
-      { "  Find Word", "<leader> fw", "Telescope live_grep" },
-      { "󰘬  Branch", "<leader> gbb", "Telescope git_branches" },
-      { "  Bookmarks", "<leader> bm", "Telescope marks" },
-      { "  Themes", "<leader> th", "Telescope themes" },
-      { "  Mappings", "<leader> ch", "NvCheatsheet" },
-    },
   },
 }
 
