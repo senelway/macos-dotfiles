@@ -13,7 +13,7 @@ vim.opt.mouse = ""
 -- vim.opt.relativenumber = true
 vim.opt.title = true
 vim.opt.swapfile = false
-vim.opt.winbar = " %m  %f"
+-- vim.opt.winbar = " %m  %f"
 
 vim.g.toggle_theme_icon = ""
 vim.g.vscode_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/snippets"
