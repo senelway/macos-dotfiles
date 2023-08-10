@@ -43,7 +43,7 @@ M.mason = {
     -- web dev stuff
     "html-lsp",
     "typescript-language-server",
-    "vue-language-server",
+    -- "vue-language-server",
 
     "eslint-lsp",
     "eslint_d",
