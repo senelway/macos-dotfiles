@@ -93,7 +93,6 @@ M.telescope = {
   n = {
     ["<leader>fs"] = { "<cmd> Telescope grep_string <CR>", "Find with string under cursor" },
     ["<leader>fc"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
-    ["<leader>fp"] = { "<cmd> Telescope projects <CR>", "Find projects list" },
     ["<leader>fr"] = { "<cmd> Telescope lsp_references <CR>", "Find references" },
   },
 }

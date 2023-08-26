@@ -10,7 +10,7 @@
 require("custom.utils.browser").load()
 
 vim.opt.mouse = ""
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 vim.opt.title = true
 vim.opt.swapfile = false
 -- vim.opt.winbar = " %m  %f"
