@@ -14,7 +14,8 @@ M.treesitter = {
     "c",
 
     "tsx",
-    "svelte",
+    -- "svelte",
+    -- "vue",
 
     "go",
     -- "rust",
@@ -43,7 +44,7 @@ M.mason = {
     -- web dev stuff
     "html-lsp",
     "typescript-language-server",
-    "svelte-language-server",
+    -- "svelte-language-server",
     -- "vue-language-server",
 
     "eslint-lsp",
