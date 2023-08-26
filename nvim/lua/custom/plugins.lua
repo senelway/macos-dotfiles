@@ -53,16 +53,6 @@ local plugins = {
   -------------------------------
 
   {
-    "ahmedkhalf/project.nvim",
-    dependencies = "nvim-telescope/telescope.nvim",
-    cmd = { "ProjectRoot" },
-    config = function()
-      require("project_nvim").setup {
-        manual_mode = true,
-      }
-    end,
-  },
-  {
     "kdheepak/lazygit.nvim",
     dependencies = "nvim-lua/plenary.nvim",
     cmd = { "LazyGit" },

@@ -14,7 +14,8 @@ M.treesitter = {
     "c",
 
     "tsx",
-    "vue",
+    -- "svelte",
+    -- "vue",
 
     "go",
     -- "rust",
@@ -31,7 +32,7 @@ M.treesitter = {
 }
 
 M.telescope = {
-  extensions_list = { "harpoon", "themes", "terms", "projects" },
+  extensions_list = { "harpoon", "themes", "terms" },
 }
 
 M.mason = {
@@ -43,6 +44,7 @@ M.mason = {
     -- web dev stuff
     "html-lsp",
     "typescript-language-server",
+    -- "svelte-language-server",
     -- "vue-language-server",
 
     "eslint-lsp",
