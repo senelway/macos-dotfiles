@@ -46,17 +46,17 @@ M.harpoon = {
       end,
       "Harpoon quick menu",
     },
-    ["<C-l>"] = {
+    ["<C-p>"] = {
       function()
         require("harpoon.ui").nav_next()
       end,
       "Harpoon next file",
     },
-    ["<C-j>"] = {
+    ["<C-u>"] = {
       function()
         require("harpoon.ui").nav_prev()
       end,
-      "Harpoon next file",
+      "Harpoon prev file",
     },
   },
 }

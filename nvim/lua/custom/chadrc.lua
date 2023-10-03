@@ -11,6 +11,9 @@ M.ui = {
   statusline = {
     theme = "vscode_colored",
   },
+  tabufline = {
+    enabled = false,
+  }
 }
 
 M.plugins = "custom.plugins"
