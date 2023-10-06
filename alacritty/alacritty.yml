@@ -1,11 +1,5 @@
 import:
   - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml 
-shell:
-  program: /bin/zsh
-  args:
-    - -l
-    - -c
-    - "tmux new -s General"
 font:
   normal:
     family: "FiraCode Nerd Font"
