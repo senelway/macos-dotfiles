@@ -1,3 +1,6 @@
+# zoom-fullscreen
+alt - f : yabai -m window --toggle zoom-fullscreen
+
 # change window focus within space
 alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
