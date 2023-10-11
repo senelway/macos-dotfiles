@@ -32,7 +32,15 @@ M.treesitter = {
 }
 
 M.telescope = {
-  extensions_list = { "harpoon", "themes", "terms" },
+  extensions_list = { "harpoon", "themes", "terms", "fzf" },
+  extensions = {
+    fzf = {
+      fuzzy = true,
+      override_generic_sorter = true,
+      override_file_sorter = true,
+      case_mode = "smart_case",
+    },
+  },
 }
 
 M.mason = {
