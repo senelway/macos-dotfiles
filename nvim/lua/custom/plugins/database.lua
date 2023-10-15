@@ -8,12 +8,8 @@ return {
 	"tpope/vim-dadbod",
 	cmd = { "DB", "DBUIAddConnection", "DBUI", "DBUIToggle" },
 	dependencies = {
-		{
-			"kristijanhusak/vim-dadbod-ui",
-		},
-		{
-			"kristijanhusak/vim-dadbod-completion",
-		},
+		{ "kristijanhusak/vim-dadbod-ui", },
+		{ "kristijanhusak/vim-dadbod-completion" },
 	},
 	config = function()
 		vim.g.db_ui_save_location = vim.fn.stdpath "config" .. require("plenary.path").path.sep .. "db_ui"
