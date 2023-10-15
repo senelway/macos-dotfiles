@@ -5,8 +5,7 @@ return {
     return require('conform').setup {
       format_on_save = {
         timeout_ms = 500,
-        lsp_fallback = true,
-        autodetect = true,
+        lsp_fallback = false,
       },
       formatters_by_ft = {
         lua = { 'stylua' },
@@ -16,6 +15,7 @@ return {
         html = { 'prettierd', 'prettier' },
         typescript = { { 'prettierd', 'prettier' }, { 'eslint', 'eslint_d' } },
         typescriptreact = { { 'prettierd', 'prettier' }, { 'eslint', 'eslint_d' } },
+        ["*"] = { "trim_whitespace" },
       },
     }
   end,
