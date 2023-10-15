@@ -13,6 +13,8 @@ vim.o.hlsearch = false
 vim.wo.number = true
 vim.o.mouse = ''
 vim.o.clipboard = 'unnamedplus'
+vim.o.showmode = false
+vim.o.laststatus = 3
 vim.o.breakindent = true
 
 vim.o.undofile = true

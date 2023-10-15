@@ -1,5 +1,8 @@
-vim.keymap.set('n', '<leader>i', ':FloatermToggle --title="" <CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>i', ':lua require("nvterm.terminal").toggle "float"<CR>', { noremap = true, silent = true })
 
 return {
-  'voldikss/vim-floaterm',
+  'NvChad/nvterm',
+  config = function()
+    require("nvterm").setup()
+  end
 }

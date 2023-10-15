@@ -23,7 +23,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-
   require 'base_plugins',
   -- require 'kickstart.plugins.autoformat',
   -- require 'kickstart.plugins.debug',
@@ -34,6 +33,7 @@ require('lazy').setup({
   require 'custom.plugins.database',
   require 'custom.plugins.formatter',
   require 'custom.plugins.comment',
+  require 'custom.plugins.term',
 }, {})
 
 require 'custom.plugins.gtihub'
@@ -247,6 +247,7 @@ local servers = {
   -- clangd = {},
   -- pyright = {},
   -- rust_analyzer = {},
+  stylelint_lsp = { filetypes = { 'css', 'scss', 'sass' } },
   eslint = { filetypes = { 'typescript', 'typescriptreact' } },
   cssls = { filetypes = { 'css', 'scss', 'sass' } },
   tailwindcss = { filetypes = { 'css', 'scss', 'sass' } },
