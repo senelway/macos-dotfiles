@@ -15,7 +15,8 @@ return {
         html = { 'prettierd', 'prettier' },
         typescript = { { 'prettierd', 'prettier' }, { 'eslint', 'eslint_d' } },
         typescriptreact = { { 'prettierd', 'prettier' }, { 'eslint', 'eslint_d' } },
-        ["*"] = { "trim_whitespace" },
+        go = { 'gofumpt', 'goimports' },
+        ['*'] = { 'trim_whitespace' },
       },
     }
   end,

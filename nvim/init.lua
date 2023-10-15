@@ -102,9 +102,6 @@ vim.defer_fn(function()
       'markdown',
       'json',
       'http',
-      'vimdoc',
-      'vim',
-      'bash',
     },
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
