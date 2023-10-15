@@ -184,6 +184,7 @@ require('lazy').setup({
   require 'custom.plugins.copilot',
   require 'custom.plugins.database',
   require 'custom.plugins.formatter',
+  require 'custom.plugins.comment',
 }, {})
 
 require 'custom.plugins.gtihub'
