@@ -4,6 +4,7 @@ vim.g.maplocalleader = ' '
 -- spliting
 vim.keymap.set('n', '\\', ':vsplit<CR>', { desc = 'Vertical split' })
 vim.keymap.set('n', '|', ':split<CR>', { desc = 'Horizontal split' })
+
 vim.keymap.set('i', 'jk', '<ESC>', { desc = 'Escape insert mode' })
 
 -- basic movement
@@ -31,3 +32,9 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+-- navigate within insert mode
+vim.keymap.set('i', '<C-j>', '<Down>', { desc = 'Move down' })
+vim.keymap.set('i', '<C-k>', '<Up>', { desc = 'Move up' })
+vim.keymap.set('i', '<C-l>', '<Right>', { desc = 'Move right' })
+vim.keymap.set('i', '<C-h>', '<Left>', { desc = 'Move left' })
