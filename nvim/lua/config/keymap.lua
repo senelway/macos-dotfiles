@@ -4,7 +4,7 @@ vim.g.maplocalleader = ' '
 -- spliting
 vim.keymap.set('n', '\\', ':vsplit<CR>', { desc = 'Vertical split' })
 vim.keymap.set('n', '|', ':split<CR>', { desc = 'Horizontal split' })
-vim.keymap.set('i', 'jj', '<ESC>', { desc = 'Escape insert mode' })
+vim.keymap.set('i', 'jk', '<ESC>', { desc = 'Escape insert mode' })
 
 -- basic movement
 vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Move down' })
@@ -16,9 +16,15 @@ vim.keymap.set('n', '<leader>oe', ':Explore<CR>', { noremap = true, silent = tru
 vim.keymap.set('n', '<leader>go', ':GithubOpen<CR>', { noremap = true, silent = true, desc = 'Github open' })
 vim.keymap.set('n', '<leader>gg', ':Git <CR>', { noremap = true, silent = true, desc = 'Git run' })
 vim.keymap.set('n', ';', ':', { noremap = true })
+
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true, desc = 'Move up' })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true, desc = 'Move down' })
+
+-- moving line
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { noremap = true, silent = true, desc = 'Move line down' })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { noremap = true, silent = true, desc = 'Move line up' })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
