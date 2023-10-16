@@ -4,12 +4,18 @@ vim.o.smartindent = true
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
 
-vim.opt.relativenumber = true
-vim.opt.mouse = ''
+vim.o.wrap = false
+
+vim.o.relativenumber = true
+vim.o.mouse = ''
 vim.o.cursorline = true
+
 vim.o.swapfile = false
+vim.o.backup = false
 
 vim.o.hlsearch = false
+vim.o.incsearch = true
+
 vim.wo.number = true
 vim.o.mouse = ''
 vim.o.clipboard = 'unnamedplus'
@@ -24,7 +30,7 @@ vim.o.smartcase = true
 
 vim.wo.signcolumn = 'yes'
 
-vim.o.updatetime = 250
+vim.o.updatetime = 50
 vim.o.timeoutlen = 300
 
 vim.o.completeopt = 'menuone,noselect'

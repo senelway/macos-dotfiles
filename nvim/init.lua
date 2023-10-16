@@ -16,7 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup(require 'plugins.setup', {})
 
-require 'config.vim'
+require 'config.set'
 
 require 'config.telescope'
 
