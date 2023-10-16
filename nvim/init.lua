@@ -1,14 +1,7 @@
--- Set <space> as the leader key
--- See `:help mapleader`
---  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-require 'custom.plugins.keymap'
-
--- Install package manager
---    https://github.com/folke/lazy.nvim
---    `:help lazy.nvim.txt` for more info
+require 'plugins.keymap'
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system {
@@ -23,31 +16,28 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-  require 'base_plugins',
   -- require 'kickstart.plugins.autoformat',
   -- require 'kickstart.plugins.debug',
-
-  require 'custom.plugins.theme',
-  require 'custom.plugins.harpoon',
-  require 'custom.plugins.copilot',
-  require 'custom.plugins.database',
-  require 'custom.plugins.formatter',
-  require 'custom.plugins.comment',
-  require 'custom.plugins.term',
+  require 'plugins.others',
+  require 'plugins.treesitter',
+  require 'plugins.telescope',
+  require 'plugins.lualine',
+  require 'plugins.lsp',
+  require 'plugins.cmp',
+  require 'plugins.theme',
+  require 'plugins.indent_blankline',
+  require 'plugins.harpoon',
+  require 'plugins.copilot',
+  require 'plugins.database',
+  require 'plugins.formatter',
+  require 'plugins.comment',
+  require 'plugins.surround',
+  require 'plugins.term',
+  require 'plugins.gitsigns',
 }, {})
 
-require 'custom.plugins.gtihub'
+require 'plugins.gtihub'
 require 'base_vim_conf'
-
--- [[ Basic Keymaps ]]
-
--- Keymaps for better default experience
--- See `:help vim.keymap.set()`
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-
--- Remap for dealing with word wrap
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
@@ -164,12 +154,6 @@ vim.defer_fn(function()
     },
   }
 end, 0)
-
--- Diagnostic keymaps
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
