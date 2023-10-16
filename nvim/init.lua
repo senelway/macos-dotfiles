@@ -14,26 +14,7 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup({
-  -- require 'kickstart.plugins.autoformat',
-  -- require 'kickstart.plugins.debug',
-  require 'plugins.others',
-  require 'plugins.treesitter',
-  require 'plugins.telescope',
-  require 'plugins.lualine',
-  require 'plugins.lsp',
-  require 'plugins.cmp',
-  require 'plugins.theme',
-  require 'plugins.indent_blankline',
-  require 'plugins.harpoon',
-  require 'plugins.copilot',
-  require 'plugins.database',
-  require 'plugins.formatter',
-  require 'plugins.comment',
-  require 'plugins.surround',
-  require 'plugins.term',
-  require 'plugins.gitsigns',
-}, {})
+require('lazy').setup(require 'plugins.setup', {})
 
 require 'config.vim'
 
