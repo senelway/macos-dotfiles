@@ -31,7 +31,7 @@ vim.o.smartcase = true
 vim.wo.signcolumn = 'yes'
 
 vim.o.updatetime = 50
-vim.o.timeoutlen = 300
+vim.o.timeoutlen = 100
 
 vim.o.completeopt = 'menuone,noselect'
 
