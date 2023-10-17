@@ -17,4 +17,5 @@ return {
   require 'plugins.term',
   require 'plugins.gitsigns',
   require 'plugins.autopairs',
+  require 'plugins.trouble'
 }
