@@ -1,16 +1,3 @@
-vim.o.expandtab = true
-vim.o.shiftwidth = 2
-vim.o.smartindent = true
-vim.o.tabstop = 2
-vim.o.softtabstop = 2
-
-vim.o.wrap = false
-
-vim.o.relativenumber = true
-vim.o.mouse = ''
-vim.o.cursorline = true
-
-vim.o.swapfile = false
 vim.o.backup = false
 
 vim.o.hlsearch = false
@@ -23,20 +10,26 @@ vim.o.showmode = false
 vim.o.laststatus = 3
 vim.o.breakindent = true
 
-vim.o.undofile = true
-
-vim.o.ignorecase = true
-vim.o.smartcase = true
-
-vim.wo.signcolumn = 'yes'
-
-vim.o.updatetime = 50
-vim.o.timeoutlen = 100
-
-vim.o.completeopt = 'menuone,noselect'
-
-vim.o.termguicolors = true
-
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
+
+vim.opt.whichwrap:append "<>[]hl"
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 2
+vim.opt.smartindent = true
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.wrap = false
+vim.opt.relativenumber = true
+vim.opt.cursorline = true
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undofile = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.updatetime = 50
+vim.opt.timeoutlen = 100
+vim.opt.completeopt:append("menuone,noselect")
+vim.opt.termguicolors = true
+vim.opt.signcolumn = "yes"
