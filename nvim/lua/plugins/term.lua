@@ -1,6 +1,6 @@
-vim.keymap.set('n', '<leader>i', ':ToggleTerm<CR>', { noremap = true, silent = true, desc = 'Term toggle floating' })
+vim.keymap.set('n', '<leader>i', ':ToggleTerm<CR>', { noremap = true, silent = true, desc = '[I] Term toggle floating' })
 vim.keymap.set('n', '<leader>hi', ':ToggleTerm direction=horizontal<CR>',
-  { noremap = true, silent = true, desc = 'Term toggle horizontal' })
+  { noremap = true, silent = true, desc = 'Term toggle [H]orizontal' })
 
 function _G.set_terminal_keymaps()
   local opts = { buffer = 0 }

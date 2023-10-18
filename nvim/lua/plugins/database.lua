@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<leader>od", ":DBUIToggle<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>od", ":DBUIToggle<CR>", { noremap = true, silent = true, desc = "[O]pen [D]atabase viewer" })
 
 local function db_completion()
 	require("cmp").setup.buffer { sources = { { name = "vim-dadbod-completion" } } }

@@ -13,9 +13,9 @@ vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move up' })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Move right' })
 vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Move left' })
 vim.keymap.set('n', '<C-q>', '<C-w>q', { desc = 'Close' })
-vim.keymap.set('n', '<leader>oe', ':Explore<CR>', { noremap = true, silent = true, desc = 'Open file explorer' })
-vim.keymap.set('n', '<leader>go', ':GithubOpen<CR>', { noremap = true, silent = true, desc = 'Github open' })
-vim.keymap.set('n', '<leader>gg', ':Git <CR>', { noremap = true, silent = true, desc = 'Git run' })
+vim.keymap.set('n', '<leader>e', ':Explore<CR>', { noremap = true, silent = true, desc = '[E]xplorer' })
+vim.keymap.set('n', '<leader>go', ':GithubOpen<CR>', { noremap = true, silent = true, desc = '[G]ithub [O]pen' })
+vim.keymap.set('n', '<leader>gg', ':Git <CR>', { noremap = true, silent = true, desc = '[G] [G]it run' })
 vim.keymap.set('n', ';', ':', { noremap = true })
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
@@ -28,9 +28,9 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { noremap = true, silent = true, de
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { noremap = true, silent = true, desc = 'Move line up' })
 
 -- Diagnostic keymaps
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
+vim.keymap.set('n', '<leader>oe', vim.diagnostic.open_float, { desc = '[O]pen floating diagnostic message / [E]rrors' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- navigate within insert mode
