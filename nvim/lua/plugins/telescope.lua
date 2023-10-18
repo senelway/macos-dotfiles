@@ -27,6 +27,7 @@ return {
         },
         sorting_strategy = 'ascending',
         layout_strategy = 'horizontal',
+        file_ignore_patterns = { "node_modules", ".git" },
       },
     }
   end,

@@ -5,8 +5,6 @@ vim.g.maplocalleader = ' '
 vim.keymap.set('n', '\\', ':vsplit<CR>', { desc = 'Vertical split' })
 vim.keymap.set('n', '|', ':split<CR>', { desc = 'Horizontal split' })
 
--- vim.keymap.set('i', 'jk', '<ESC>', { desc = 'Escape insert mode' })
-
 -- basic movement
 vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Move down' })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move up' })
