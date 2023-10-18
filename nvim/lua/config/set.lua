@@ -1,3 +1,4 @@
+vim.o.termguicolors = true
 vim.o.backup = false
 vim.o.hlsearch = false
 vim.o.incsearch = true
@@ -7,7 +8,6 @@ vim.o.laststatus = 3
 vim.o.updatetime = 50
 vim.o.timeoutlen = 100
 vim.o.completeopt = 'menuone,noselect'
-vim.o.termguicolors = true
 vim.o.mouse = 'a'
 vim.o.clipboard = 'unnamedplus'
 vim.o.breakindent = true

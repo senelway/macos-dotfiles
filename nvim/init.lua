@@ -1,3 +1,4 @@
+require 'config.set'
 require 'config.keymap'
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -16,7 +17,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup(require 'plugins.setup', {})
 
-require 'config.set'
 
 require 'config.telescope'
 

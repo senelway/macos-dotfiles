@@ -6,9 +6,14 @@ local servers = {
   eslint = { filetypes = { 'typescript', 'typescriptreact' } },
   cssls = { filetypes = { 'css', 'scss', 'sass' } },
   tailwindcss = { filetypes = { 'css', 'scss', 'sass' } },
-  gopls = { filetypes = { 'go' } },
   tsserver = { filetypes = { 'typescript', 'typescriptreact' } },
   html = { filetypes = { 'html' } },
+  gopls = {
+    filetypes = { 'go' },
+    gopls = {
+      gofumpt = true,
+    },
+  },
 
   lua_ls = {
     lua = {
