@@ -7,7 +7,14 @@ return {
   'tpope/vim-sleuth',
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim', opts = {} },
+  {
+    'folke/which-key.nvim',
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 500
+    end,
+  },
 
   -- Colorize color names
   {
