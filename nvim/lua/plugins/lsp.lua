@@ -60,7 +60,7 @@ return {
         -- BETA
         if client.name == 'gopls' then
           vim.api.nvim_create_autocmd("BufWritePre", {
-            pattern = "*.go",
+            buffer = bufnr,
             callback = function()
               local params = vim.lsp.util.make_range_params()
               params.context = { only = { "source.organizeImports" } }
