@@ -40,7 +40,7 @@ M.harpoon = {
       end,
       "Add file to harpoon",
     },
-    ["<leader>fh"] = {
+    ["<leader>ss"] = {
       function()
         require("harpoon.ui").toggle_quick_menu()
       end,
@@ -63,7 +63,7 @@ M.harpoon = {
 
 M.lazygit = {
   n = {
-    ["<leader>gl"] = { "<cmd> LazyGit <cr>", "Open LazyGit" },
+    ["<leader>lg"] = { "<cmd> LazyGit <cr>", "Open LazyGit" },
   },
 }
 M.RestNvim = {
@@ -80,8 +80,8 @@ M.dadbod = {
 
 M.Trouble = {
   n = {
-    ["<leader>fe"] = { "<cmd> Trouble <cr>", "Find errors in file" },
-    ["<leader>fE"] = { "<cmd> Trouble workspace_diagnostics <cr>", "Find errors in workspace" },
+    ["<leader>xx"] = { "<cmd> Trouble <cr>", "Find errors in file" },
+    ["<leader>xw"] = { "<cmd> Trouble workspace_diagnostics <cr>", "Find errors in workspace" },
   },
 }
 

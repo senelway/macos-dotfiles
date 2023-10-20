@@ -55,10 +55,8 @@ M.mason = {
     -- "svelte-language-server",
     -- "vue-language-server",
 
-    "eslint-lsp",
     "eslint_d",
 
-    "prettier",
     "prettierd",
 
     -- style
