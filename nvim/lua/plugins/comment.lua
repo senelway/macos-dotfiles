@@ -6,5 +6,6 @@ vim.keymap.set('v', '<leader>/', "<ESC><cmd>lua require('Comment.api').toggle.li
 return {
   'numToStr/Comment.nvim',
   opts = {},
-  lazy = false,
+  lazy = true,
+  event = 'InsertEnter',
 }

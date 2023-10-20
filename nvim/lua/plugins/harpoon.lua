@@ -8,6 +8,7 @@ vim.api.nvim_set_keymap('n', '<C-u>', ":lua require('harpoon.ui').nav_prev()<CR>
 
 return {
   'ThePrimeagen/harpoon',
+  event = 'VeryLazy',
   config = function()
     require('harpoon').setup {}
   end,

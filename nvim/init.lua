@@ -15,14 +15,40 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup(require 'plugins.setup', {})
-
-
-require 'config.telescope'
-
-vim.defer_fn(function()
-  require 'config.treesitter'
-end, 0)
+require('lazy').setup(
+  require 'plugins.setup',
+  {
+    performance = {
+      rtp = {
+        disabled_plugins = {
+          "2html_plugin",
+          "tohtml",
+          "getscript",
+          "getscriptPlugin",
+          "gzip",
+          "logipat",
+          "matchit",
+          "tar",
+          "tarPlugin",
+          "rrhelper",
+          "spellfile_plugin",
+          "vimball",
+          "vimballPlugin",
+          "zip",
+          "zipPlugin",
+          "tutor",
+          "rplugin",
+          "syntax",
+          "synmenu",
+          "optwin",
+          "compiler",
+          "bugreport",
+          "ftplugin",
+        },
+      },
+    },
+  }
+)
 
 require('mason').setup()
 require('mason-lspconfig').setup()
@@ -30,9 +56,7 @@ require('mason-lspconfig').setup()
 require('neodev').setup()
 
 require 'config.lspconfig'
-require 'config.cmp'
 
-require 'config.which_key'
 ---
 require 'tools.github'
 require 'tools.yank'
