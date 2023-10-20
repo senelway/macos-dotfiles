@@ -61,12 +61,8 @@ local plugins = {
     "tpope/vim-dadbod",
     cmd = { "DB", "DBUIAddConnection", "DBUI", "DBUIToggle" },
     dependencies = {
-      {
-        "kristijanhusak/vim-dadbod-ui",
-      },
-      {
-        "kristijanhusak/vim-dadbod-completion",
-      },
+      { "kristijanhusak/vim-dadbod-ui", },
+      { "kristijanhusak/vim-dadbod-completion", },
     },
     config = function()
       require("custom.configs.dadbod").setup {}

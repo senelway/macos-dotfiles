@@ -76,6 +76,7 @@ M.tabufline = {
   plugin = true,
 
   n = {
+    -- // NOTE: works only if TABS(buffer) are enabled
     -- cycle through buffers
     ["<tab>"] = {
       function()
@@ -116,7 +117,9 @@ M.comment = {
 
   v = {
     ["<leader>/"] = {
-      "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
+      function()
+        require("Comment.api").toggle.linewise(vim.fn.visualmode())
+      end,
       "Toggle comment",
     },
   },
@@ -223,7 +226,7 @@ M.lspconfig = {
       function()
         vim.lsp.buf.add_workspace_folder()
       end,
-      "Add workspace folder",
+      "[A}dd [W]orkspace Folder",
     },
 
     ["<leader>wr"] = {
@@ -248,7 +251,6 @@ M.nvimtree = {
   n = {
     -- toggle
     ["<C-n>"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
-
     -- focus
     ["<leader>e"] = { "<cmd> NvimTreeFocus <CR>", "Focus nvimtree" },
   },
@@ -266,6 +268,7 @@ M.telescope = {
     ["<leader>sh"] = { "<cmd> Telescope help_tags <CR>", "Help page" },
     ["<leader>so"] = { "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },
     ["<leader>sz"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
+    ["<leader>sw"] = { "<cmd> Telescope grep_string <CR>", "Find with string under cursor" },
 
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
