@@ -7,6 +7,7 @@ M.general = {
     ["\\"] = { "<cmd> vsplit <cr>", "Split horizontal" },
     ["|"] = { "<cmd> split <cr>", "Split vertical" },
     ["="] = { "<cmd> close <cr>" },
+    ["<leader>rw"] = { "<cmd> tabdo wincmd = <cr>", "Reload window size" },
 
     ["<leader>we"] = { "<cmd> set spell <cr>", "Enable spell checking" },
     ["<leader>wE"] = { "<cmd> set spell! <cr>", "Disable spell checking" },
@@ -100,6 +101,22 @@ M.tabufline = {
   },
 }
 
+M.telescope = {
+  plugin = true,
+
+  n = {
+    -- find
+    ["<leader>sf"] = { "<cmd> Telescope find_files <CR>", "Find files" },
+    ["<leader>sa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "Find all" },
+    ["<leader>sg"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
+    ["<leader>sb"] = { "<cmd> Telescope buffers <CR>", "Find buffers" },
+    ["<leader>sh"] = { "<cmd> Telescope help_tags <CR>", "Help page" },
+    ["<leader>so"] = { "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },
+    ["<leader>sz"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
+    ["<leader>sw"] = { "<cmd> Telescope grep_string <CR>", "Find with string under cursor" },
+  },
+}
+
 M.nvterm = {
   plugin = true,
   t = {
@@ -125,6 +142,12 @@ M.nvterm = {
 M.lspconfig = {
   plugin = true,
   n = {
+    ["<leader>f"] = {
+      function()
+        vim.diagnostic.open_float { border = "rounded" }
+      end,
+      "Floating diagnostic",
+    },
     ["gd"] = {
       function()
         vim.lsp.buf.definition { on_list = require("custom.utils.helpers").definition_on_list }

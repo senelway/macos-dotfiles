@@ -61,6 +61,8 @@ M.general = {
   v = {
     ["<Up>"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', "Move up", opts = { expr = true } },
     ["<Down>"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "Move down", opts = { expr = true } },
+    ["<"] = { "<gv", "Indent line" },
+    [">"] = { ">gv", "Indent line" },
   },
 
   x = {
@@ -76,7 +78,6 @@ M.tabufline = {
   plugin = true,
 
   n = {
-    -- // NOTE: works only if TABS(buffer) are enabled
     -- cycle through buffers
     ["<tab>"] = {
       function()
@@ -93,7 +94,7 @@ M.tabufline = {
     },
 
     -- close buffer + hide terminal buffer
-    ["<leader>q"] = {
+    ["<leader>x"] = {
       function()
         require("nvchad.tabufline").close_buffer()
       end,
@@ -117,9 +118,7 @@ M.comment = {
 
   v = {
     ["<leader>/"] = {
-      function()
-        require("Comment.api").toggle.linewise(vim.fn.visualmode())
-      end,
+      "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
       "Toggle comment",
     },
   },
@@ -194,7 +193,7 @@ M.lspconfig = {
       "LSP references",
     },
 
-    ["<leader>f"] = {
+    ["<leader>lf"] = {
       function()
         vim.diagnostic.open_float { border = "rounded" }
       end,
@@ -226,7 +225,7 @@ M.lspconfig = {
       function()
         vim.lsp.buf.add_workspace_folder()
       end,
-      "[A}dd [W]orkspace Folder",
+      "Add workspace folder",
     },
 
     ["<leader>wr"] = {
@@ -243,6 +242,15 @@ M.lspconfig = {
       "List workspace folders",
     },
   },
+
+  v = {
+    ["<leader>ca"] = {
+      function()
+        vim.lsp.buf.code_action()
+      end,
+      "LSP code action",
+    },
+  },
 }
 
 M.nvimtree = {
@@ -251,6 +259,7 @@ M.nvimtree = {
   n = {
     -- toggle
     ["<C-n>"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+
     -- focus
     ["<leader>e"] = { "<cmd> NvimTreeFocus <CR>", "Focus nvimtree" },
   },
@@ -261,14 +270,13 @@ M.telescope = {
 
   n = {
     -- find
-    ["<leader>sf"] = { "<cmd> Telescope find_files <CR>", "Find files" },
-    ["<leader>sa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "Find all" },
-    ["<leader>sg"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
-    ["<leader>sb"] = { "<cmd> Telescope buffers <CR>", "Find buffers" },
-    ["<leader>sh"] = { "<cmd> Telescope help_tags <CR>", "Help page" },
-    ["<leader>so"] = { "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },
-    ["<leader>sz"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
-    ["<leader>sw"] = { "<cmd> Telescope grep_string <CR>", "Find with string under cursor" },
+    ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "Find files" },
+    ["<leader>fa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "Find all" },
+    ["<leader>fw"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
+    ["<leader>fb"] = { "<cmd> Telescope buffers <CR>", "Find buffers" },
+    ["<leader>fh"] = { "<cmd> Telescope help_tags <CR>", "Help page" },
+    ["<leader>fo"] = { "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },
+    ["<leader>fz"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
 
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
@@ -377,7 +385,10 @@ M.blankline = {
   n = {
     ["<leader>cc"] = {
       function()
-        local ok, start = require("indent_blankline.utils").get_current_context(vim.g.indent_blankline_context_patterns, vim.g.indent_blankline_use_treesitter_scope)
+        local ok, start = require("indent_blankline.utils").get_current_context(
+          vim.g.indent_blankline_context_patterns,
+          vim.g.indent_blankline_use_treesitter_scope
+        )
 
         if ok then
           vim.api.nvim_win_set_cursor(vim.api.nvim_get_current_win(), { start, 0 })
