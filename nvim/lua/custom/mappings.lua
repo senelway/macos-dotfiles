@@ -13,8 +13,8 @@ M.general = {
     ["<leader>wE"] = { "<cmd> set spell! <cr>", "Disable spell checking" },
     ["<C-\\>"] = { "<cmd> vertical resize +10 <cr>", "Resize vertical window" },
 
-    ["<C-S-j>"] = { "<cmd> m .+1 <cr>", "Move line down" },
-    ["<C-S-k>"] = { "<cmd> m .-2 <cr>", "Move line down" },
+    ["<C-j>"] = { "<cmd> m .+1 <cr>", "Move line down", opts = { noremap = true, nowait = true, silent = true } },
+    ["<C-k>"] = { "<cmd> m .-2 <cr>", "Move line down", opts = { noremap = true, nowait = true, silent = true } },
 
     ["<leader>tt"] = { "<cmd> terminal <cr>", "Terminal open (classic mode)" },
   },
