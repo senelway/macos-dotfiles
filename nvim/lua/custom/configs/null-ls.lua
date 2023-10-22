@@ -7,26 +7,22 @@ end
 local b = null_ls.builtins
 
 local sources = {
-  -- webdev stuff
-  b.formatting.prettier.with {
-    -- TODO: migrate to ROME
-    bin = "prettierd",
+  b.formatting.prettierd.with {
     filetypes = { "html", "markdown", "css", "ts", "tsx", "vue", "pcss", "scss", "pcss" },
     cli_options = {
       config_precedence = "prefer-file",
     },
-  }, -- so prettier works only on these filetypes
+  },
 
-  -- frontend
-  b.formatting.eslint_d,
-  b.diagnostics.eslint_d,
+  b.formatting.eslint_d.with { filetypes = { "typescript", "typescriptreact", "vue" } },
+  b.diagnostics.eslint_d.with { filetypes = { "typescript", "typescriptreact", "vue" } },
 
   -- Lua
-  b.formatting.stylua,
+  b.formatting.stylua.with { filetypes = { "lua" } },
 
   -- golang
-  b.formatting.gofumpt,
-  b.formatting.goimports,
+  b.formatting.gofumpt.with { filetypes = { "go" } },
+  b.formatting.goimports.with { filetypes = { "go" } },
 
   -- rust
   -- b.formatting.rustfmt,
@@ -52,9 +48,5 @@ null_ls.setup {
         end,
       })
     end
-    vim.api.nvim_create_autocmd("VimLeavePre", {
-      group = augroup,
-      command = "silent !eslint_d restart",
-    })
   end,
 }

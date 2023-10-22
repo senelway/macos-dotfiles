@@ -30,6 +30,11 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
+    dependencies = {
+      {
+        "nvim-treesitter/nvim-treesitter-context",
+      },
+    },
   },
   {
     "nvim-tree/nvim-tree.lua",
@@ -61,8 +66,8 @@ local plugins = {
     "tpope/vim-dadbod",
     cmd = { "DB", "DBUIAddConnection", "DBUI", "DBUIToggle" },
     dependencies = {
-      { "kristijanhusak/vim-dadbod-ui", },
-      { "kristijanhusak/vim-dadbod-completion", },
+      { "kristijanhusak/vim-dadbod-ui" },
+      { "kristijanhusak/vim-dadbod-completion" },
     },
     config = function()
       require("custom.configs.dadbod").setup {}
