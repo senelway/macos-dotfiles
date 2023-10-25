@@ -1,6 +1,6 @@
-vim.api.nvim_set_keymap('n', '<leader>ha', ":lua require('harpoon.mark').add_file()<CR>",
+vim.api.nvim_set_keymap('n', '<leader>a', ":lua require('harpoon.mark').add_file()<CR>",
   { desc = "[A]dd to [H]arpoon list" })
-vim.api.nvim_set_keymap('n', '<leader>hf', ":lua require('harpoon.ui').toggle_quick_menu()<CR>",
+vim.api.nvim_set_keymap('n', '<leader>ss', ":lua require('harpoon.ui').toggle_quick_menu()<CR>",
   { desc = "[F]ind [H]arpoon`ed" })
 vim.api.nvim_set_keymap('n', '<C-p>', ":lua require('harpoon.ui').nav_next()<CR>",
   { desc = "[P]revious in Harpoon list" })
