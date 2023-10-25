@@ -2,8 +2,8 @@ vim.keymap.set('n', '<leader>lg', function() require("lazygit").lazygit() end, {
 
 return {
   "kdheepak/lazygit.nvim",
+  event = "VeryLazy",
   dependencies = {
     "nvim-lua/plenary.nvim",
   },
 }
-

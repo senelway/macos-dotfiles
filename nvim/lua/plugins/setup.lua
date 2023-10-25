@@ -18,5 +18,6 @@ return {
   require 'plugins.gitsigns',
   require 'plugins.autopairs',
   require 'plugins.trouble',
-  require 'plugins.lazygit'
+  require 'plugins.lazygit',
+  require 'plugins.better_escape'
 }

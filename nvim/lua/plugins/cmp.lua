@@ -1,6 +1,10 @@
 return {
   -- Autocompletion
   'hrsh7th/nvim-cmp',
+  event = 'InsertEnter',
+  config = function()
+    require 'cmp'.setup(require('config.cmp'))
+  end,
   dependencies = {
     -- Snippet Engine & its associated nvim-cmp source
     'L3MON4D3/LuaSnip',

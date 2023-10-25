@@ -1,4 +1,4 @@
-require('nvim-treesitter.configs').setup {
+return {
   -- Add languages to be installed here that you want installed for treesitter
   ensure_installed = {
     'go',
@@ -65,10 +65,10 @@ require('nvim-treesitter.configs').setup {
     swap = {
       enable = true,
       swap_next = {
-        ['<leader>a'] = '@parameter.inner',
+        ['<leader>n'] = '@parameter.inner',
       },
       swap_previous = {
-        ['<leader>A'] = '@parameter.inner',
+        ['<leader>N'] = '@parameter.inner',
       },
     },
   },

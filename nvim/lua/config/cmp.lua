@@ -1,13 +1,10 @@
 local cmp = require 'cmp'
-local luasnip = require 'luasnip'
-require('luasnip.loaders.from_vscode').lazy_load()
-luasnip.config.setup {}
 
-cmp.setup {
+return {
   snippet = {
     expand = function(args)
-      luasnip.lsp_expand(args.body)
-    end,
+      require 'luasnip'.lsp_expand(args.body)
+    end
   },
   mapping = cmp.mapping.preset.insert {
     ['<C-n>'] = cmp.mapping.select_next_item(),

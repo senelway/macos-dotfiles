@@ -6,6 +6,7 @@ vim.keymap.set('n', '<leader>tt', ":terminal<CR>", { desc = '[T]erminal classic 
 
 return {
   "NvChad/nvterm",
+  event = 'VeryLazy',
   config = function()
     require("nvterm").setup()
   end,
