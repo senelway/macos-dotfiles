@@ -10,10 +10,11 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Move down' })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move up' })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Move right' })
 vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Move left' })
-vim.keymap.set('n', '<C-q>', '<C-w>q', { desc = 'Close' })
 vim.keymap.set('n', '<leader>go', ':GithubOpen<CR>', { noremap = true, silent = true, desc = '[G]ithub [O]pen' })
 vim.keymap.set('n', '<leader>gg', ':Git <CR>', { noremap = true, silent = true, desc = '[G] [G]it run' })
 vim.keymap.set('n', ';', ':', { noremap = true })
+vim.keymap.set('n', '<leader>rw', ':tabdo wincmd =<CR>',
+  { noremap = true, silent = true, desc = '[R] Equalize [W]indow sizes' })
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
