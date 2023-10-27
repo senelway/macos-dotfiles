@@ -9,7 +9,7 @@ return {
   },
   config = function()
     local api = require("nvim-tree");
-    api.setup({
+    return api.setup({
       filters = {
         dotfiles = false,
       },
@@ -61,15 +61,6 @@ return {
               symlink_open = "",
               arrow_open = "",
               arrow_closed = "",
-            },
-            git = {
-              unstaged = "✗",
-              staged = "✓",
-              unmerged = "",
-              renamed = "➜",
-              untracked = "★",
-              deleted = "",
-              ignored = "◌",
             },
           },
         },
