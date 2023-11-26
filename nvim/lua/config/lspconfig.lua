@@ -5,7 +5,7 @@ local servers = {
   stylelint_lsp = { filetypes = { 'css', 'scss', 'sass' } },
   eslint = { filetypes = { 'typescript', 'typescriptreact' } },
   cssls = { filetypes = { 'css', 'scss', 'sass' } },
-  tailwindcss = { filetypes = { 'css', 'scss', 'sass' } },
+  tailwindcss = { filetypes = { 'css', 'scss', 'sass', 'typescriptreact' } },
   tsserver = { filetypes = { 'typescript', 'typescriptreact' } },
   html = { filetypes = { 'html' } },
   gopls = {
