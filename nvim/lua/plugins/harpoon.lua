@@ -1,15 +1,16 @@
-vim.api.nvim_set_keymap('n', '<leader>a', ":lua require('harpoon.mark').add_file()<CR>",
-  { desc = "[A]dd to [H]arpoon list" })
-vim.api.nvim_set_keymap('n', '<leader>ss', ":lua require('harpoon.ui').toggle_quick_menu()<CR>",
-  { desc = "[F]ind [H]arpoon`ed" })
-vim.api.nvim_set_keymap('n', '<C-p>', ":lua require('harpoon.ui').nav_next()<CR>",
-  { desc = "[P]revious in Harpoon list" })
-vim.api.nvim_set_keymap('n', '<C-u>', ":lua require('harpoon.ui').nav_prev()<CR>", { desc = "[U] Next in Harpoon list" })
-
 return {
   'ThePrimeagen/harpoon',
   event = 'VeryLazy',
+  branch = "harpoon2",
   config = function()
-    require('harpoon').setup {}
+    local harpoon = require("harpoon")
+
+    harpoon:setup()
+
+    vim.keymap.set("n", "<leader>a", function() harpoon:list():append() end, { desc = "[A]dd to [H]arpoon list" })
+    vim.keymap.set("n", "<leader>ss", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end,
+      { desc = "[F]ind [H]arpoon" })
+    vim.keymap.set('n', '<C-u>', function() harpoon:list():next() end, { desc = "[U] Next in Harpoon list" })
+    vim.keymap.set('n', '<C-p>', function() harpoon:list():prev() end, { desc = "[P]revious in Harpoon list" })
   end,
 }
