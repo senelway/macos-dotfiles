@@ -17,6 +17,7 @@ vim.keymap.set('n', '<leader>rw', ':tabdo wincmd =<CR>',
   { noremap = true, silent = true, desc = '[R] Equalize [W]indow sizes' })
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+vim.keymap.set('n', '<leader>sp', ":echo @%<CR>", { noremap = true, silent = true, desc = '[S]how [P]ath' })
 
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true, desc = 'Move up' })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true, desc = 'Move down' })
