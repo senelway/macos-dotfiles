@@ -4,6 +4,7 @@ return {
   event = 'InsertEnter',
   config = function()
     require 'cmp'.setup(require('config.cmp'))
+    require("luasnip.loaders.from_vscode").lazy_load()
   end,
   dependencies = {
     -- Snippet Engine & its associated nvim-cmp source
@@ -15,7 +16,6 @@ return {
 
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
-
 
     -- Adds a number of user-friendly snippets
     'rafamadriz/friendly-snippets',
