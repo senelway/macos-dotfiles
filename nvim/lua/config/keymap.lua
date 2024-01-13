@@ -15,6 +15,14 @@ vim.keymap.set('n', '<leader>go', ':GithubOpen<CR>', { noremap = true, silent = 
 vim.keymap.set('n', '<leader>gg', ':Git <CR>', { noremap = true, silent = true, desc = '[G] [G]it run' })
 vim.keymap.set('n', '<leader>gd', ':Gvdiff <CR>', { noremap = true, silent = true, desc = '[G]it [d]iff' })
 vim.keymap.set('n', '<leader>gD', ':Git diff <CR>', { noremap = true, silent = true, desc = '[G]it [D]iff classic' })
+vim.keymap.set('n', '<leader>gm', ':Git mergetool <CR>', { noremap = true, silent = true, desc = '[G]it [M]ergetool' })
+vim.keymap.set('n', '<leader>ga', ':Git add <CR>', { noremap = true, silent = true, desc = '[G]it [A]dd' })
+vim.keymap.set('n', '<leader>gp', ':Git push origin ', { noremap = true, desc = '[G]it [P]ush origin %' })
+vim.keymap.set('n', '<leader>gl', ':lua vim.cmd("!gh pr create --fill --web")<CR>',
+  { noremap = true, silent = true, desc = '[G]it [L]aunch the opening of a pull request' })
+vim.keymap.set('n', '<leader>gx', ':lua vim.cmd("!git checkout main && git pull && get fetch --all --prune")<CR>',
+  { noremap = true, silent = true, desc = '[G]it [X] checkout, fetch, prune' })
+--
 --
 -- General
 vim.keymap.set('n', ';', ':', { noremap = true })
