@@ -15,7 +15,7 @@ vim.keymap.set('n', '<leader>go', ':GithubOpen<CR>', { noremap = true, silent = 
 vim.keymap.set('n', '<leader>gg', ':Git <CR>', { noremap = true, silent = true, desc = '[G] [G]it run' })
 vim.keymap.set('n', '<leader>gd', ':Gvdiff <CR>', { noremap = true, silent = true, desc = '[G]it [d]iff' })
 vim.keymap.set('n', '<leader>gD', ':Git diff <CR>', { noremap = true, silent = true, desc = '[G]it [D]iff classic' })
-vim.keymap.set('n', '<leader>gP', ':Git push', { noremap = true, silent = true, desc = '[G]it [P]ush' })
+vim.keymap.set('n', '<leader>gP', ':Git push <CR>', { noremap = true, silent = true, desc = '[G]it [P]ush' })
 --
 -- General
 vim.keymap.set('n', ';', ':', { noremap = true })
