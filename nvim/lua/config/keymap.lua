@@ -17,7 +17,7 @@ vim.keymap.set('n', '<leader>gd', ':Gvdiff <CR>', { noremap = true, silent = tru
 vim.keymap.set('n', '<leader>gD', ':Git diff <CR>', { noremap = true, silent = true, desc = '[G]it [D]iff classic' })
 vim.keymap.set('n', '<leader>gm', ':Git mergetool <CR>', { noremap = true, silent = true, desc = '[G]it [M]ergetool' })
 vim.keymap.set('n', '<leader>ga', ':Git add <CR>', { noremap = true, silent = true, desc = '[G]it [A]dd' })
-vim.keymap.set('n', '<leader>gp', ':Git push origin', { noremap = true, silent = true, desc = '[G]it [P]ush origin %' })
+vim.keymap.set('n', '<leader>gp', ':Git push origin ', { noremap = true, desc = '[G]it [P]ush origin %' })
 --
 --
 -- General
