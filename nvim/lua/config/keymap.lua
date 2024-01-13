@@ -10,17 +10,20 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Move down' })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move up' })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Move right' })
 vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Move left' })
+-- Git integration
 vim.keymap.set('n', '<leader>go', ':GithubOpen<CR>', { noremap = true, silent = true, desc = '[G]ithub [O]pen' })
 vim.keymap.set('n', '<leader>gg', ':Git <CR>', { noremap = true, silent = true, desc = '[G] [G]it run' })
+vim.keymap.set('n', '<leader>gd', ':Gvdiff <CR>', { noremap = true, silent = true, desc = '[G]it [d]iff' })
+vim.keymap.set('n', '<leader>gD', ':Git diff <CR>', { noremap = true, silent = true, desc = '[G]it [D]iff classic' })
+--
+-- General
 vim.keymap.set('n', ';', ':', { noremap = true })
 vim.keymap.set('n', '<leader>rw', ':tabdo wincmd =<CR>',
   { noremap = true, silent = true, desc = '[R] Equalize [W]indow sizes' })
-
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-
 vim.keymap.set('n', '<leader>sp', ":echo @%<CR>", { noremap = true, silent = true, desc = '[S]how [P]ath' })
 vim.keymap.set('n', '<leader>bw', ':bw<CR>', { noremap = true, silent = true, desc = '[B]uffer [W]ipeout' })
-
+--
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true, desc = 'Move up' })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true, desc = 'Move down' })
 
