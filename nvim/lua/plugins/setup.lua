@@ -20,4 +20,5 @@ return {
   require 'plugins.trouble',
   require 'plugins.better_escape',
   require 'plugins.nvim_tree',
+  require 'plugins.todo',
 }
