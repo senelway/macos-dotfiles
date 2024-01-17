@@ -1,5 +1,6 @@
 vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true, desc = '[E]xplorer' })
 
+
 return {
   "nvim-tree/nvim-tree.lua",
   version = "*",
@@ -10,6 +11,11 @@ return {
   config = function()
     local api = require("nvim-tree");
     return api.setup({
+      actions = {
+        open_file = {
+          quit_on_open = true,
+        },
+      },
       filters = {
         dotfiles = false,
       },
