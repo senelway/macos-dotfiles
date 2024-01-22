@@ -12,4 +12,5 @@ yabai -m rule --add app='Discord' manage=off
 yabai -m rule --add app='Installer' manage=off
 yabai -m rule --add app='JetBrains Toolbox' manage=off
 yabai -m rule --add app='Calendar' manage=off
+yabai -m rule --add app='Boom3d' manage=off
 
