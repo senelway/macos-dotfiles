@@ -1,7 +1,7 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-function generate_options(desc)
+local function generate_options(desc)
   return { noremap = true, silent = true, desc = desc }
 end
 
@@ -27,7 +27,6 @@ vim.keymap.set('n', '<leader>gl', ':lua vim.cmd("!gh pr create --fill --web")<CR
   generate_options('[G]it [L]aunch the opening of a pull request'))
 vim.keymap.set('n', '<leader>gx', ':lua vim.cmd("!git checkout main && git pull && git fetch --all --prune")<CR>',
   generate_options('[G]it [X] checkout, fetch, prune'))
---
 --
 -- General
 vim.keymap.set('n', ';', ':', { noremap = true })
