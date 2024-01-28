@@ -43,5 +43,5 @@ shift + cmd - k : yabai -m window --resize top:0:40
 shift + cmd - a : osascript -e 'tell application "Alacritty" to activate'
 shift + cmd - c : osascript -e 'tell application "Chromium" to activate'
 shift + cmd - s : osascript -e 'tell application "Slack" to activate'
-shift + cmd - t : osascript -e 'tell application "Telegram" to activate'
+shift + cmd - w : osascript -e 'tell application "Telegram" to activate'
 shift + cmd - m : osascript -e 'tell application "Apple Music" to activate'
