@@ -35,6 +35,7 @@ vim.keymap.set('n', '<leader>rw', ':tabdo wincmd =<CR>',
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<leader>sp', ":echo @%<CR>", generate_options('[S]how [P]ath'))
 vim.keymap.set('n', '<leader>bw', ':bw<CR>', generate_options('[B]uffer [W]ipeout'))
+vim.keymap.set('n', '<leader>e', ':Explore %:p:h<CR>', generate_options('[E]xplore'))
 --
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true, desc = 'Move up' })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true, desc = 'Move down' })
