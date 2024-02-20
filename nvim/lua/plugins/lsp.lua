@@ -53,9 +53,10 @@ return {
         if client.name == 'tsserver' then
           vim.api.nvim_create_autocmd('BufWritePre', {
             buffer = bufnr,
-            command = 'EslintFixAll',
+            command = 'EslintFixAll'
           })
         end
+
 
         -- gopls autoimport format
         -- BETA
