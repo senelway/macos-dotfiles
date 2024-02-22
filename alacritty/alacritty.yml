@@ -1,3 +1,6 @@
+env:
+  TERM: xterm-256color
+
 import:
   - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml 
 font:
@@ -16,15 +19,15 @@ font:
 
 # defaults write -g AppleFontSmoothing -int 0
 # defaults -currentHost write -g AppleFontSmoothing -int 0
-# 
-custom_cursor_colors: true
-
+#
 window:
   decorations: buttonless
   dynamic_padding: false
   dynamic_title: false
 
 tabspaces: 2
+
+custom_cursor_colors: true
 
 colors:
   cursor:
