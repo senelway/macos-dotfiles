@@ -6,6 +6,10 @@ vim.keymap.set('n', '<leader>sb', function()
   require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown { winblend = 10, previewer = false })
 end, { desc = 'Fuzzily search in current [B]uffer' })
 
+vim.keymap.set('n', '<leader>s/',
+  function() require('telescope.builtin').live_grep { grep_open_files = true, prompt_title = 'Live Grep in Open Files', } end,
+  { desc = '[S]earch [/] in Open Files' })
+
 vim.keymap.set('n', '<leader>gs', function() require('telescope.builtin').git_files() end,
   { desc = '[S]earch [G]it Files' })
 vim.keymap.set('n', '<leader>sf', function() require('telescope.builtin').find_files() end, { desc = '[S]earch [F]iles' })
