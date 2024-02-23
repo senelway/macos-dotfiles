@@ -1,4 +1,4 @@
-![telegram-cloud-photo-size-2-5386865849886954513-y](https://github.com/senelway/dotfiles/assets/9702154/e8195528-f348-4e2e-9665-5429366245a3)
+![telegram-cloud-photo-size-2-5386865849886954766-y](https://github.com/senelway/dotfiles/assets/9702154/0b7bef5f-77ba-4875-a9d5-6c94670cc64a)
 
 ## Layers
 <img width="874" alt="image" src="https://github.com/senelway/dotfiles/assets/9702154/51395353-cb20-48ea-a7cc-0b9fa89a9879">
