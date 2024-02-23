@@ -1,5 +1,4 @@
 return {
-  -- require 'kickstart.plugins.debug',
   require 'plugins.treesitter',
   require 'plugins.telescope',
   require 'plugins.lualine',
@@ -13,6 +12,7 @@ return {
   require 'plugins.copilot',
   require 'plugins.database',
   require 'plugins.comment',
+  require 'plugins.conform',
   require 'plugins.surround',
   require 'plugins.term',
   require 'plugins.gitsigns',
@@ -20,5 +20,4 @@ return {
   require 'plugins.trouble',
   require 'plugins.better_escape',
   require 'plugins.todo',
-  require 'plugins.giter',
 }

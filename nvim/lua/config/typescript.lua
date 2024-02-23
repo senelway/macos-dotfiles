@@ -16,23 +16,17 @@ local function filter(arr, fn)
 end
 
 local function filterReactDTS(value)
-  return string.match(value.filename, "node_modules/@types/react/index.d.ts") == nil
+  return string.match(value.filename, "react/index.d.ts") == nil
 end
 
-M.definition_on_list = function(options)
+M.on_list = function(options)
   local items = options.items
   if #items > 1 then
     items = filter(items, filterReactDTS)
   end
 
   vim.fn.setqflist({}, " ", { title = options.title, items = items, context = options.context })
-  vim.api.nvim_command "cfirst" -- or maybe you want 'copen' instead of 'cfirst'
+  vim.api.nvim_command("cfirst")
 end
 
-M.isCurrentBufferOption = function(value)
-  local bufnr = vim.api.nvim_get_current_buf()
-  local fileType = vim.api.nvim_buf_get_option(bufnr, "filetype")
-  return fileType == value
-end
-
-return M
+return M;

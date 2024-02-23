@@ -1,10 +1,8 @@
 return {
-  "lukas-reineke/indent-blankline.nvim",
-  main = "ibl",
+  'lukas-reineke/indent-blankline.nvim',
+  main = 'ibl',
   event = 'InsertEnter',
-  config = function()
-    require("ibl").setup {
-      indent = { char = "▏" },
-    }
-  end
+  opts = {
+    indent = { char = '▏' },
+  },
 }
