@@ -1,7 +1,6 @@
 return {
   require 'plugins.treesitter',
   require 'plugins.telescope',
-  require 'plugins.lualine',
   require 'plugins.cmp',
   require 'plugins.lsp',
   require 'plugins.others',
@@ -13,11 +12,10 @@ return {
   require 'plugins.database',
   require 'plugins.comment',
   require 'plugins.conform',
-  require 'plugins.surround',
   require 'plugins.term',
   require 'plugins.gitsigns',
   require 'plugins.autopairs',
   require 'plugins.trouble',
-  require 'plugins.better_escape',
   require 'plugins.todo',
+  require 'plugins.mini',
 }
