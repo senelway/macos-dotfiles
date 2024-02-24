@@ -68,7 +68,7 @@ return { -- LSP Configuration & Plugins
         map('K', vim.lsp.buf.hover, 'Hover Documentation')
 
         -- Show the signature of the function you're currently completing.
-        map('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+        map('<C-K>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
         -- WARN: This is not Goto Definition, this is Goto Declaration.
         --  For example, in C this would take you to the header
@@ -127,6 +127,15 @@ return { -- LSP Configuration & Plugins
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format lua code
+      'css-lsp',
+      'gopls',
+      'html-lsp',
+      'eslint-lsp',
+      'gopls',
+      'stylelint-lsp',
+      'lua-language-server',
+      'tailwindcss-language-server',
+      'typescript-language-server',
     })
     --
     --  You can press `g?` for help in this menu
