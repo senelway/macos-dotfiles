@@ -63,7 +63,8 @@ vim.opt.splitbelow = true
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' } 
 ]]
-
+vim.opt.tabstop = 2
+--
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
 
@@ -78,5 +79,4 @@ vim.opt.scrolloff = 10
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
-vim.opt.incsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')

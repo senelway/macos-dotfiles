@@ -17,5 +17,6 @@ return {
   require 'plugins.autopairs',
   require 'plugins.trouble',
   require 'plugins.todo',
+  require 'plugins.lualine',
   require 'plugins.mini',
 }
