@@ -1,7 +1,7 @@
 local M = {}
 
 local function filter(arr, fn)
-  if type(arr) ~= "table" then
+  if type(arr) ~= 'table' then
     return arr
   end
 
@@ -16,7 +16,7 @@ local function filter(arr, fn)
 end
 
 local function filterReactDTS(value)
-  return string.match(value.filename, "react/index.d.ts") == nil
+  return string.match(value.filename, 'react/index.d.ts') == nil
 end
 
 M.on_list = function(options)
@@ -25,8 +25,8 @@ M.on_list = function(options)
     items = filter(items, filterReactDTS)
   end
 
-  vim.fn.setqflist({}, " ", { title = options.title, items = items, context = options.context })
-  vim.api.nvim_command("cfirst")
+  vim.fn.setqflist({}, ' ', { title = options.title, items = items, context = options.context })
+  vim.api.nvim_command 'cfirst'
 end
 
-return M;
+return M
