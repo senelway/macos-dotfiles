@@ -93,6 +93,7 @@ return { -- LSP Configuration & Plugins
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
+      rust_analyzer = { filetypes = { 'rust' } },
       eslint = { filetypes = { 'typescript', 'typescriptreact' } },
       stylelint_lsp = { filetypes = { 'css', 'scss', 'sass' } },
       cssls = { filetypes = { 'css', 'scss', 'sass' }, scss = { lint = { unknownAtRules = 'ignore' } } },
@@ -126,12 +127,15 @@ return { -- LSP Configuration & Plugins
     -- for you, so that they are available from within Neovim.
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
-      'stylua', -- Used to format lua code
+      'stylua',
+      'goimports',
+      'gofumpt',
+
       'css-lsp',
       'gopls',
       'html-lsp',
+      'rust_analyzer',
       'eslint-lsp',
-      'gopls',
       'stylelint-lsp',
       'lua-language-server',
       'tailwindcss-language-server',
