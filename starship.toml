@@ -90,7 +90,7 @@ stashed = ""
 modified = " $count "
 staged = '[ $count ](green)'
 renamed = " $count "
-untracked = " $count "
+untracked = "[ $count ](yellow)"
 style = "bold red"
 
 [time]
@@ -120,7 +120,7 @@ style = 'bold dimmed green'
 [os]
 format = "[$symbol]($style)"
 style = "bold blue"
-disabled = false
+disabled = true
 
 [os.symbols]
 Alpaquita = " "

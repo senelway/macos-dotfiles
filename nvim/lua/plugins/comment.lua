@@ -1,6 +1,7 @@
 return {
   {
     'numToStr/Comment.nvim',
+    vent = { 'BufReadPost', 'BufNewFile' },
     opts = {
       ---LHS of toggle mappings in NORMAL mode
       toggler = {
