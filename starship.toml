@@ -80,6 +80,19 @@ $cmd_duration $jobs $time $battery$memory_usage\
 $line_break\
 $character"""
 
+[git_status]
+format = "[$all_status$ahead_behind]($style)"
+ahead = "⇡ $count "
+behind = "⇣ $count "
+deleted = " $count "
+diverged = "󰓁 $count "
+stashed = ""
+modified = " $count "
+staged = '[ $count ](green)'
+renamed = " $count "
+untracked = " $count "
+style = "bold red"
+
 [time]
 disabled = true
 style = "bold green"
@@ -90,9 +103,9 @@ symbol = ' '
 style = ''
 
 [battery]
-full_symbol = '🔋'
-charging_symbol = '⚡️'
-discharging_symbol = '💀'
+full_symbol = '[󰁹 ](green)'
+charging_symbol = '[󱐥 ](yellow)'
+discharging_symbol = ''
 
 [[battery.display]]
 threshold = 100
