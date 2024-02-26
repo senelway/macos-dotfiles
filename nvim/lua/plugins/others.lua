@@ -1,15 +1,10 @@
 return {
-  -- Git related plugins
-  { 'tpope/vim-fugitive', event = "InsertEnter" },
-  { 'tpope/vim-rhubarb',  event = "InsertEnter" },
-
   -- Detect tabstop and shiftwidth automatically
-  { 'tpope/vim-sleuth',   event = "InsertEnter" },
-
-  -- Useful plugin to show you pending keybinds.
+  { 'tpope/vim-sleuth', event = 'InsertEnter' },
+  { 'tpope/vim-fugitive', event = 'InsertEnter' },
   {
     'folke/which-key.nvim',
-    event = "VeryLazy",
+    event = 'VeryLazy',
     config = function()
       require('which-key').register {
         ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
@@ -21,14 +16,5 @@ return {
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
       }
     end,
-  },
-
-  -- Colorize color names
-  {
-    'norcalli/nvim-colorizer.lua',
-    event = "InsertEnter",
-    config = function()
-      require 'colorizer'.setup()
-    end
   },
 }
