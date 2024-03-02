@@ -19,5 +19,7 @@ return {
 
     vim.keymap.set('n', '<leader>tr', ':Neotest run<CR>', { noremap = true }, '[T]est [R]run')
     vim.keymap.set('n', '<leader>ts', ':Neotest summary<CR>', { noremap = true }, '[T]est [S]ummary')
+    vim.keymap.set('n', '<leader>to', ':Neotest output<CR>', { noremap = true }, '[T]est [O]output')
+    vim.keymap.set('n', '<leader>tO', ':Neotest output-panel<CR>', { noremap = true }, '[T]est [O]output-panel')
   end,
 }
