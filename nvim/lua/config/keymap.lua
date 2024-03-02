@@ -25,9 +25,11 @@ vim.keymap.set('n', '<leader>gc', ':Git checkout -b ', { noremap = true, desc = 
 vim.keymap.set('n', '<leader>gl', ':lua vim.cmd("!gh pr create --fill --web")<CR>', generate_options '[G]it [L]aunch the opening of a pull request')
 vim.keymap.set('n', '<leader>gx', ':lua vim.cmd("!git checkout main && git pull && git fetch --all --prune")<CR>', generate_options '[G]it [X] checkout, fetch, prune')
 --
+-- resize
+vim.keymap.set('n', '<leader>rw', ':tabdo wincmd =<CR>', generate_options '[R] Equalize [W]indow sizes')
+--
 -- General
 vim.keymap.set('n', ';', ':', { noremap = true })
-vim.keymap.set('n', '<leader>rw', ':tabdo wincmd =<CR>', generate_options '[R] Equalize [W]indow sizes')
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<leader>bw', ':bw<CR>', generate_options '[B]uffer [W]ipeout')
 vim.keymap.set('n', '<leader>e', ':Explore %:p:h<CR>', generate_options '[E]xplore')

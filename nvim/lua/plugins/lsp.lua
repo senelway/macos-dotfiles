@@ -66,7 +66,7 @@ return { -- LSP Configuration & Plugins
         map('K', vim.lsp.buf.hover, 'Hover Documentation')
 
         -- Show the signature of the function you're currently completing.
-        map('<C-K>', vim.lsp.buf.signature_help, 'Signature Documentation')
+        map('<C-M>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
         -- WARN: This is not Goto Definition, this is Goto Declaration.
         --  For example, in C this would take you to the header
@@ -91,15 +91,6 @@ return { -- LSP Configuration & Plugins
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
-      rust_analyzer = { filetypes = { 'rust' } },
-      eslint = { filetypes = { 'typescript', 'typescriptreact' } },
-      stylelint_lsp = { filetypes = { 'css', 'scss', 'sass' } },
-      cssls = { filetypes = { 'css', 'scss', 'sass' }, scss = { lint = { unknownAtRules = 'ignore' } } },
-      tailwindcss = { filetypes = { 'css', 'scss', 'sass', 'typescriptreact' } },
-      tsserver = { filetypes = { 'typescript', 'typescriptreact' } },
-      html = { filetypes = { 'html' } },
-      gopls = { filetypes = { 'go' }, gopls = { gofumpt = true } },
-
       lua_ls = {
         -- cmd = {...},
         -- filetypes { ...},
@@ -116,6 +107,9 @@ return { -- LSP Configuration & Plugins
                 unpack(vim.api.nvim_get_runtime_file('', true)),
               },
             },
+          },
+          completion = {
+            callSnippet = 'Replace',
           },
         },
       },
@@ -145,6 +139,7 @@ return { -- LSP Configuration & Plugins
       'stylelint-lsp',
       'lua-language-server',
       'tailwindcss-language-server',
+      'lua-language-server',
       'typescript-language-server',
     })
 
@@ -154,15 +149,11 @@ return { -- LSP Configuration & Plugins
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}
-          require('lspconfig')[server_name].setup {
-            cmd = server.cmd,
-            settings = server.settings,
-            filetypes = server.filetypes,
-            -- This handles overriding only values explicitly passed
-            -- by the server configuration above. Useful when disabling
-            -- certain features of an LSP (for example, turning off formatting for tsserver)
-            capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {}),
-          }
+          -- This handles overriding only values explicitly passed
+          -- by the server configuration above. Useful when disabling
+          -- certain features of an LSP (for example, turning off formatting for tsserver)
+          server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
+          require('lspconfig')[server_name].setup(server)
         end,
       },
     }
