@@ -3,6 +3,32 @@ vim.opt.termguicolors = true
 vim.opt.backup = false
 vim.opt.wrap = false
 
+-- Netrw banner
+-- 0 : Disable banner
+-- 1 : Enable banner
+vim.g.netrw_banner = 0
+
+-- Human-readable files sizes
+vim.g.netrw_sizestyle = 'H'
+
+-- Open files in split
+-- 0 : re-use the same window (default)
+-- 1 : horizontally splitting the window first
+-- 2 : vertically   splitting the window first
+-- 3 : open file in new tab
+-- 4 : act like "P" (ie. open previous window)
+vim.g.netrw_browse_split = 0
+
+-- Enable recursive copy of directories in *nix systems
+vim.g.netrw_localcopydircmd = 'cp -r'
+
+-- Enable recursive creation of directories in *nix systems
+vim.g.netrw_localmkdir = 'mkdir -p'
+
+-- Enable recursive removal of directories in *nix systems
+-- NOTE: we use 'rm' instead of 'rmdir' (default) to be able to remove non-empty directories
+vim.g.netrw_localrmdir = 'rm -r'
+
 vim.opt.completeopt = 'menuone,noselect'
 
 -- Make line numbers default

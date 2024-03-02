@@ -19,4 +19,6 @@ return {
   require 'plugins.todo',
   require 'plugins.lualine',
   require 'plugins.mini',
+  require 'plugins.debug',
+  require 'plugins.tests',
 }
