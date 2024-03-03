@@ -16,16 +16,6 @@ return { -- LSP Configuration & Plugins
           vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
         end
 
-        -- TODO: remove this
-        local client = vim.lsp.get_client_by_id(event.data.client_id)
-        if client.name == 'tsserver' then
-          vim.api.nvim_create_autocmd('BufWritePre', {
-            buffer = event.buf,
-            command = 'EslintFixAll',
-          })
-        end
-        -- TODO:
-
         -- Jump to the definition of the word under your cursor.
         --  This is where a variable was first declared, or where a function is defined, etc.
         --  To jump back, press <C-T>.
@@ -91,6 +81,14 @@ return { -- LSP Configuration & Plugins
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
+      eslint = {
+        on_attach = function(_, bufnr)
+          vim.api.nvim_create_autocmd('BufWritePre', {
+            buffer = bufnr,
+            command = 'EslintFixAll',
+          })
+        end,
+      },
       lua_ls = {
         -- cmd = {...},
         -- filetypes { ...},
@@ -127,10 +125,15 @@ return { -- LSP Configuration & Plugins
     -- for you, so that they are available from within Neovim.
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
+      -- formatter
       'stylua',
       'goimports',
       'gofumpt',
 
+      -- DAP
+      'delve',
+
+      -- LSP
       'css-lsp',
       'gopls',
       'html-lsp',
