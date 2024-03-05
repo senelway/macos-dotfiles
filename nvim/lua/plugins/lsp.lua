@@ -134,16 +134,21 @@ return { -- LSP Configuration & Plugins
       'delve',
 
       -- LSP
-      'css-lsp',
+      -- -- go
       'gopls',
-      'html-lsp',
+      'golangci-lint-langserver',
+      'golangci-lint',
+      -- -- rust
       'rust_analyzer',
+      -- -- lua
+      'lua-language-server',
+      -- -- frontend
+      'css-lsp',
+      'html-lsp',
       'eslint-lsp',
       'stylelint-lsp',
-      'lua-language-server',
-      'tailwindcss-language-server',
-      'lua-language-server',
       'typescript-language-server',
+      'tailwindcss-language-server',
     })
 
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
