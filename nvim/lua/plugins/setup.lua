@@ -21,4 +21,5 @@ return {
   require 'plugins.mini',
   require 'plugins.debug',
   require 'plugins.tests',
+  require 'plugins.nvim_tree',
 }

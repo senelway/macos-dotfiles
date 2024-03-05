@@ -35,10 +35,10 @@ return {
       -- visual mode
       map('v', '<leader>hs', function()
         gs.stage_hunk { vim.fn.line '.', vim.fn.line 'v' }
-      end, { desc = 'stage git hunk' })
+      end, { desc = 'Git [H]unk [S]tage' })
       map('v', '<leader>hr', function()
         gs.reset_hunk { vim.fn.line '.', vim.fn.line 'v' }
-      end, { desc = 'reset git hunk' })
+      end, { desc = 'git [H]unk [R]eset' })
       -- normal mode
       map('n', '<leader>hs', gs.stage_hunk, { desc = 'git stage hunk' })
       map('n', '<leader>hr', gs.reset_hunk, { desc = 'git reset hunk' })
@@ -56,7 +56,7 @@ return {
 
       -- Toggles
       map('n', '<leader>gB', gs.toggle_current_line_blame, { desc = '[G]it toggle [B]lame' })
-      map('n', '<leader>gD', gs.toggle_deleted, { desc = '[G]it toggle [D]iff' })
+      map('n', '<leader>gd', gs.toggle_deleted, { desc = '[G]it toggle [D]iff' })
 
       -- Text object
       map({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>', { desc = 'select git hunk' })

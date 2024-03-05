@@ -8,6 +8,7 @@ return {
         auto_trigger = true,
         keymap = {
           accept = '<C-v>',
+          next = '<C-c>',
         },
       },
     }
