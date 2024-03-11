@@ -14,15 +14,15 @@ return {
       },
     }
 
-    vim.keymap.set('n', '<leader>a', function()
+    vim.keymap.set('n', '<C-a>', function()
       harpoon:list():append()
     end, { desc = '[A]dd to [H]arpoon list' })
 
-    vim.keymap.set('n', '<leader>ss', function()
+    vim.keymap.set('n', '<leader>sm', function()
       harpoon.ui:toggle_quick_menu(harpoon:list())
     end, { desc = '[F]ind [H]arpoon' })
 
-    vim.keymap.set('n', '<C-u>', function()
+    vim.keymap.set('n', '<C-n>', function()
       harpoon:list():next()
     end, { desc = '[U] Next in Harpoon list' })
 
