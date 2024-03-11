@@ -24,11 +24,9 @@ vim.keymap.set('n', '<leader>gm', ':Git mergetool <CR>', generate_options '[G]it
 vim.keymap.set('n', '<leader>rw', ':tabdo wincmd =<CR>', generate_options '[R] Equalize [W]indow sizes')
 --
 -- General
-vim.keymap.set('n', ';', ':', { noremap = true })
-vim.keymap.set('i', 'jk', '<Esc>', { silent = true })
+vim.keymap.set('i', 'jj', '<Esc>', { silent = true })
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<leader>bw', ':bw<CR>', generate_options '[B]uffer [W]ipeout')
-vim.keymap.set('n', '<leader>e', ':Explore %:p:h<CR>', generate_options '[E]xplore')
 --
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true, desc = 'Move up' })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true, desc = 'Move down' })
