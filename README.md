@@ -24,7 +24,7 @@ skhd --start-service
 ### FZF
 ```sh
 alias cdf='cd $(find ~/Projects -type d -maxdepth 4 -not -path "*/.git/*" -not -path "*/node_modules/*" | fzf)'
-alias cdv='$(cdf) && v'
+alias cdv='cd $(find ~/Projects -type d -maxdepth 4 -not -path "*/.git/*" -not -path "*/node_modules/*" | fzf) && nvim .'
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!{.git,node_modules,vendor,.vscode,*.log,*.pyc,*.o,*.tmp,.DS_Store,Library,
 .orbstack,.password-store}"'
