@@ -70,6 +70,12 @@ return {
       }
     end, { desc = '[S]earch [/] in Open Files' })
 
+    vim.keymap.set('n', '<leader>sp', function()
+      builtin.find_files {
+        search_dirs = { '~/Projects/' },
+      }
+    end, { desc = '[S]earch [/] in Open Files' })
+
     -- Shortcut for searching your neovim configuration files
     vim.keymap.set('n', '<leader>sn', function()
       builtin.find_files {

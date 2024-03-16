@@ -127,8 +127,11 @@ return { -- LSP Configuration & Plugins
     vim.list_extend(ensure_installed, {
       -- formatter
       'stylua',
+      -- -- go
       'goimports',
       'gofumpt',
+      -- -- c#
+      'omnisharp',
 
       -- DAP
       'delve',
