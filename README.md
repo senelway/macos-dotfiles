@@ -20,3 +20,13 @@ yabai --start-service
 brew install koekeishiya/formulae/skhd
 skhd --start-service
 ```
+
+### FZF
+```sh
+alias cdf='cd $(find ~/Projects -type d -maxdepth 4 -not -path "*/.git/*" -not -path "*/node_modules/*" | fzf)'
+alias cdv='$(cdf) && v'
+
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!{.git,node_modules,vendor,.vscode,*.log,*.pyc,*.o,*.tmp,.DS_Store,Library,
+.orbstack,.password-store}"'
+export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
+```

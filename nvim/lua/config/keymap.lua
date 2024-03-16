@@ -35,6 +35,9 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", generate_options 'Move line down')
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", generate_options 'Move line up')
 
+-- nerdtree
+vim.keymap.set('n', '<leader>e', ':Explore %:p:h<CR>', generate_options '[E]xplore')
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
