@@ -5,10 +5,6 @@ local function generate_options(desc)
   return { noremap = true, silent = true, desc = desc }
 end
 
--- spliting
-vim.keymap.set('n', '\\', ':vsplit<CR>', { desc = 'Vertical split' })
-vim.keymap.set('n', '|', ':split<CR>', { desc = 'Horizontal split' })
-
 -- basic movement
 vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Move down' })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move up' })
@@ -36,7 +32,7 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", generate_options 'Move line down')
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", generate_options 'Move line up')
 
 -- nerdtree
-vim.keymap.set('n', '<leader>e', ':Explore %:p:h<CR>', generate_options '[E]xplore')
+-- vim.keymap.set('n', '<leader>e', ':Explore %:p:h<CR>', generate_options '[E]xplore')
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
@@ -54,3 +50,7 @@ vim.keymap.set('i', '<C-h>', '<Left>', { desc = 'Move left' })
 vim.keymap.set('v', 'gsn', ':sort<CR>', { desc = '[S]ort [N]ormal' })
 vim.keymap.set('v', 'gsi', ':sort i<CR>', { desc = '[S]ort [I]gnore case' })
 vim.keymap.set('v', 'gsu', ':sort u<CR>', { desc = '[S]ort Remove dupclitaes' })
+
+-- quick fix
+vim.keymap.set('n', ']q', ':cnext<CR>zz', { desc = 'Forward qfixlist' })
+vim.keymap.set('n', '[q', ':cprev<CR>zz', { desc = 'Backward qfixlist' })

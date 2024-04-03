@@ -14,7 +14,7 @@ return {
       },
     }
 
-    vim.keymap.set('n', '<C-a>', function()
+    vim.keymap.set('n', '<leader>a', function()
       harpoon:list():append()
     end, { desc = '[A]dd to [H]arpoon list' })
 

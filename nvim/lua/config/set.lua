@@ -1,15 +1,12 @@
 vim.opt.termguicolors = true
 
-vim.opt.backup = false
-vim.opt.wrap = false
-
 -- Netrw banner
 -- 0 : Disable banner
 -- 1 : Enable banner
-vim.g.netrw_banner = 0
+-- vim.g.netrw_banner = 0
 
 -- Human-readable files sizes
-vim.g.netrw_sizestyle = 'H'
+-- vim.g.netrw_sizestyle = 'H'
 
 -- Open files in split
 -- 0 : re-use the same window (default)
@@ -17,16 +14,16 @@ vim.g.netrw_sizestyle = 'H'
 -- 2 : vertically   splitting the window first
 -- 3 : open file in new tab
 -- 4 : act like "P" (ie. open previous window)
-vim.g.netrw_browse_split = 0
+-- vim.g.netrw_browse_split = 0
 
 -- Enable recursive copy of directories in *nix systems
-vim.g.netrw_localcopydircmd = 'cp -r'
+-- vim.g.netrw_localcopydircmd = 'cp -r'
 
 -- Enable recursive creation of directories in *nix systems
-vim.g.netrw_localmkdir = 'mkdir -p'
+-- vim.g.netrw_localmkdir = 'mkdir -p'
 
 -- Enable recursive removal of directories in *nix systems
-vim.g.netrw_localrmdir = 'rm -r'
+-- vim.g.netrw_localrmdir = 'rm -r'
 
 vim.opt.completeopt = 'menuone,noselect'
 
@@ -37,6 +34,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.swapfile = false
+vim.opt.backup = false
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -63,20 +61,20 @@ vim.opt.smartcase = true
 vim.opt.signcolumn = 'yes'
 
 -- Decrease update time
-vim.opt.updatetime = 250
-vim.opt.timeoutlen = 300
+-- vim.opt.updatetime = 250
+-- vim.opt.timeoutlen = 300
 
 -- Configure how new splits should be opened
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+-- vim.opt.splitright = true
+-- vim.opt.splitbelow = true
 
 -- Sets how neovim will display certain whitespace in the editor.
 --  See :help 'list'
 --  and :help 'listchars'
---[[ 
-vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' } 
-]]
+--
+-- vim.opt.list = true
+-- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+--
 vim.opt.tabstop = 2
 --
 -- Preview substitutions live, as you type!
@@ -93,4 +91,3 @@ vim.opt.scrolloff = 10
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
