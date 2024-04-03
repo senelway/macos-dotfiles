@@ -89,6 +89,11 @@ return { -- LSP Configuration & Plugins
           })
         end,
       },
+      cssls = {
+        settings = {
+          scss = { lint = { unknownAtRules = 'ignore' } },
+        },
+      },
       lua_ls = {
         -- cmd = {...},
         -- filetypes { ...},
@@ -136,11 +141,16 @@ return { -- LSP Configuration & Plugins
       -- DAP
       'delve',
 
+      -- LINT
+      'jsonlint',
+      'golangci-lint',
+      'yamllint',
+      'htmlhint',
+
       -- LSP
       -- -- go
       'gopls',
       'golangci-lint-langserver',
-      'golangci-lint',
       -- -- rust
       'rust_analyzer',
       -- -- lua

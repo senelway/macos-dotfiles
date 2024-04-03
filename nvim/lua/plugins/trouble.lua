@@ -1,10 +1,6 @@
-vim.keymap.set('n', '<leader>ot', function()
+vim.keymap.set('n', '<leader>ott', function()
   require('trouble').toggle 'workspace_diagnostics'
 end, { desc = '[T]rouble workspace diagnostic' })
-
-vim.keymap.set('n', '<leader>oT', function()
-  require('trouble').toggle 'document_diagnostics'
-end, { desc = '[T]rouble document diagnostic' })
 
 return {
   'folke/trouble.nvim',
