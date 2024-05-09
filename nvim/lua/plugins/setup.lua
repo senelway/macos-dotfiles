@@ -9,6 +9,7 @@ return {
   require 'plugins.indent_blankline',
   require 'plugins.harpoon',
   require 'plugins.copilot',
+  require 'plugins.copilot_chat',
   require 'plugins.database',
   require 'plugins.comment',
   require 'plugins.conform',
