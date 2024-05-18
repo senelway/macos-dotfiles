@@ -3,5 +3,5 @@
   url = git@github.com:catppuccin/alacritty.git
 
 [submodule "nvim"]
-  path = nvim
-  url = git@github.com:senelway/nvim.git
+	path = nvim
+	url = https://github.com/senelway/nvim.git
