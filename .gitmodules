@@ -2,6 +2,6 @@
   path = alacritty/catppuccin
   url = git@github.com:catppuccin/alacritty.git
 
-[submodule "senelway/nvim"]
+[submodule "nvim"]
   path = nvim
   url = git@github.com:senelway/nvim.git
