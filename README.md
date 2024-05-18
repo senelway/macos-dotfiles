@@ -30,3 +30,8 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!{.git,node_mod
 .orbstack,.password-store}"'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 ```
+
+## NVIM [repo](https://github.com/senelway/nvim)
+```
+git clone git@github.com:senelway/nvim.git
+```

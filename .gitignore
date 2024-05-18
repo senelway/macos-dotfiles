@@ -8,5 +8,6 @@ configstore
 simple-update-notifier
 .github
 nvim/db_ui
-old_nvim
 lazy-lock.json
+htop
+nvim

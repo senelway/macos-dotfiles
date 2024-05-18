@@ -1,5 +1,3 @@
-vim.opt.termguicolors = true
-
 -- Netrw banner
 -- 0 : Disable banner
 -- 1 : Enable banner
