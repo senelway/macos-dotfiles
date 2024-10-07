@@ -1,0 +1,73 @@
+import = ["~/.config/alacritty/catppuccin/catppuccin-mocha.toml"]
+
+[colors.cursor]
+cursor = "#00ffcb"
+text = "#1E1E2E"
+
+[font]
+size = 12.0
+
+[font.bold]
+family = "FiraCode Nerd Font"
+style = "Retina"
+
+[font.normal]
+family = "FiraCode Nerd Font"
+style = "Light"
+
+[font.offset]
+x = 0
+y = 4
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "Return"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B[13;2u"
+key = "Return"
+mods = "Shift"
+
+[[keyboard.bindings]]
+chars = "\u001B[13;5u"
+key = "Return"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollPageUp"
+key = "J"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "ScrollPageDown"
+key = "K"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001B[74;5u"
+key = "J"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001B[75;5u"
+key = "K"
+mods = "Control|Shift"
+
+[mouse]
+hide_when_typing = true
+
+[window]
+decorations = "buttonless"
+dynamic_padding = false
+dynamic_title = false
